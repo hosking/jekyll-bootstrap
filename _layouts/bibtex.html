@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<html>
+<head></head>
+<body>
+  <h2>{{ page.entry.title }}</h2>
+  <h5>{{ page.entry.author }}</h5>
+  {% if links.pdf %}
+  <a href="{{ links.pdf }}">PDF</a>
+  {% endif %}
+  {% if page.entry.abstract %}
+  <h4>Abstract</h4>
+  <p>{{ page.entry.abstract }}</p>
+  {% endif %}
+  <pre>{{ page.entry.bibtex }}</pre>
+</body>
+</html>

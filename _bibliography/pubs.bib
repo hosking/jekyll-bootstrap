@@ -1,0 +1,2703 @@
+---
+---
+
+@string{jan={January}}
+@string{feb={February}}
+@string{mar={March}}
+@string{apr={April}}
+@string{may={May}}
+@string{jun={June}}
+@string{jul={July}}
+@string{aug={August}}
+@string{sep={September}}
+@string{oct={October}}
+@string{nov={November}}
+@string{dec={December}}
+
+@Book{JHM2011,
+  author =       {Richard Jones and Antony Hosking and Eliot Moss},
+  title =        {The Garbage Collection Handbook: The Art of Automatic Memory
+                  Management},
+  publisher =    {Chapman and Hall/CRC Press},
+  year =         2012,
+  series =       {CRC Applied Algorithms and Data Structures},
+  month =        aug
+}
+
+@Article{Kalibera+2011TOCS,
+  author =       {Tomas Kalibera and Filip Pizlo and Antony L. Hosking and Jan
+                  Vitek},
+  title =        {Scheduling Real-Time Garbage Collection on Uniprocessors},
+  journal =      {ACM Transactions on Computer Systems},
+  year =         2011,
+  volume =       3,
+  number =       1,
+  pages =        {8:1--29},
+  month =        aug,
+  doi =          {10.1145/2003690.2003692},
+  abstract =     {Managed languages such as Java and C\# are increasingly being
+                  considered for hard real-time applications because of their
+                  productivity and software engineering advantages. Automatic
+                  memory management, or garbage collection, is a key enabler
+                  for robust, reusable libraries, yet remains a challenge for
+                  analysis and implementation of real-time execution
+                  environments. This article comprehensively compares leading
+                  approaches to hard real-time garbage collection. There are
+                  many design decisions involved in selecting a real-time
+                  garbage collection algorithm. For time-based garbage
+                  collectors on uniprocessors one must choose whether to use
+                  <em>periodic</em>, <em>slack-based</em> or <em>hybrid</em>
+                  scheduling. A significant impediment to valid experimental
+                  comparison of such choices is that commercial
+                  implementations use completely different proprietary
+                  infrastructures. We present Minuteman, a framework for
+                  experimenting with real-time collection algorithms in the
+                  context of a high-performance execution environment for
+                  real-time Java. We provide the first comparison of the
+                  approaches, both experimentally using realistic workloads,
+                  and analytically in terms of schedulability.}
+}
+
+@Article{McGachey+2011JOT,
+  author =       {Phil McGachey and Antony L. Hosking and J. Eliot B. Moss},
+  title =        {Class Transformations for Transparent Distribution of Java
+                  Applications},
+  journal =      {Journal of Object Technology},
+  year =         2011,
+  volume =       10,
+  pages =        {9:1--35},
+  month =        aug,
+  doi =          {10.5381/jot.2011.10.1.a9},
+  abstract =     {The indirection of object accesses is a common theme for
+                  target domains as diverse as transparent distribution,
+                  persistence, and program instrumentation. Virtualizing
+                  accesses to fields and methods (by redirecting calls through
+                  accessor and indirection methods) allows interposition of
+                  arbitrary code, extending the functionality of an
+                  application beyond that intended by the original
+                  developer.<p> We present class modifications performed by
+                  our RuggedJ transparent distribution platform for standard
+                  Java virtual machines. RuggedJ abstracts over the location
+                  of objects by implementing a single object model for local
+                  and remote objects. However the implementation of this model
+                  is complicated by the presence of native and system code;
+                  classes loaded by Java's bootstrap class loader can be
+                  rewritten only in a limited manner, and so cannot be
+                  modified to conform to RuggedJ's complex object model. We
+                  observe that system code comprises the majority of a given
+                  Java application: an average of 78\% in the applications we
+                  study. We consider the constraints imposed upon pervasive
+                  class transformation within Java, and present a framework
+                  for systematically rewriting arbitrary applications. Our
+                  system accommodates all system classes, allowing both user
+                  and system classes alike to be referenced using a single
+                  object model.}
+}
+
+@Article{McGachey+2009ENTCS,
+  author =       {Phil McGachey and Antony L. Hosking and J. Eliot B. Moss},
+  title =        {Pervasive Load-Time Transformation for Transparently
+                  Distributed Java},
+  journal =      {Electronic Notes in Theoretical Computer Science},
+  year =         2009,
+  volume =       253,
+  number =       5,
+  pages =        {47--64},
+  month =        dec,
+  doi =          {10.1016/j.entcs.2009.11.014},
+  abstract =     {The transformation of large, off-the-shelf Java applications
+                  to support complex new functionality essentially requires
+                  generation of an entirely new application that retains the
+                  execution semantics of the original. We describe such a
+                  whole-program modification in the context of RuggedJ, a
+                  dynamic transparent Java distribution system.<p>  We discuss
+                  the proxy-based object model that allows remote Java objects
+                  to be referenced in the same way as those residing on the
+                  current virtual machine, the optimizations that allow us to
+                  bypass proxies in the case of purely local or remote object,
+                  and the mechanisms needed to guarantee that static data
+                  remain unique in a distributed system. We then detail some
+                  of the more interesting features involved when implementing
+                  this object model in rewritten bytecode, including
+                  transformations required within method bodies and
+                  coordination between bytecode and the run-time system that
+                  distributes an application across the network.}
+}
+
+@Article{Blackburn+2008CACM,
+  author =       {Stephen M. Blackburn and Kathryn S. McKinley and Robin
+                  Garner and Chris Hoffmann and Asjad M. Khan and Rotem
+                  Bentzur and Amer Diwan and Daniel Feinberg and Daniel
+                  Frampton and Samuel Z. Guyer and Martin Hirzel and Antony
+                  Hosking and Maria Jump and Han Lee and J. Eliot B. Moss and
+                  Aashish Phansalkar and Darko Stefanovi{\'c} and Thomas
+                  VanDrunen and Daniel von Dincklage and Ben Wiedermann},
+  title =        {Wake Up and Smell the Coffee: Evaluation Methodology for the
+                  21st Century},
+  journal =      {Communications of the ACM},
+  year =         2008,
+  volume =       51,
+  number =       8,
+  pages =        {83--89},
+  month =        aug,
+  doi =          {10.1145/1378704.1378723},
+  abstract =     {Evaluation methodology underpins all innovation in
+                  experimental computer science. It requires relevant
+                  <em>workloads</em>, appropriate <em>experimental
+                  design</em>, and <em>rigorous analysis</em>. Unfortunately,
+                  methodology is not keeping pace with the changes in our
+                  field. The rise of managed languages such as Java, C\#, and
+                  Ruby in the past decade and the imminent rise of commodity
+                  multicore architectures for the next decade pose new
+                  methodological challenges that are not yet widely
+                  understood. This paper explores the consequences of our
+                  collective inattention to methodology on innovation, makes
+                  recommendations for addressing this problem in one domain,
+                  and provides guidelines for other domains. We describe
+                  benchmark suite design, experimental design, and analysis
+                  for evaluating Java applications. For example, we introduce
+                  new criteria for measuring and selecting diverse
+                  applications for a benchmark suite. We show that the
+                  complexity and nondeterminism of the Java runtime system
+                  make experimental design a first-order consideration, and we
+                  recommend mechanisms for addressing complexity and
+                  nondeterminism. Drawing on these results, we suggest how to
+                  adapt methodology more broadly. To continue to deliver
+                  innovations, our field needs to significantly increase
+                  participation in and funding for developing sound
+                  methodological foundations.}
+}
+
+@Article{MossHosking2006SCP,
+  author =       {J. Eliot B. Moss and Antony L. Hosking},
+  title =        {Nested Transactional Memory: Model and Architecture
+                  Sketches},
+  journal =      {Science of Computer Programming},
+  year =         2006,
+  volume =       63,
+  pages =        {186--201},
+  month =        dec,
+  doi =          {10.1016/j.scico.2006.05.010},
+  abstract =     {We offer a reference model for nested transactions at the
+                  level of memory accesses, and sketch possible hardware
+                  architecture designs that implement that model. We describe
+                  both closed and open nesting. The model is abstract in that
+                  it does not relate to hardware, such as caches, but
+                  describes memory as seen by each transaction, memory access
+                  conflicts, and the effects of commits and aborts. The
+                  hardware sketches describe approaches to implementing the
+                  model using bounded size caches in a processor with
+                  overflows to memory. In addition to a model that will
+                  support concurrency within a transaction, we describe a
+                  simpler model that we call <em>linear nesting</em>. Linear
+                  nesting supports only a single thread of execution in a
+                  transaction nest, but may be easier to implement. While we
+                  hope that the model is a good target to which to compile
+                  transactions from source languages, the mapping from source
+                  constructs to nested transactional memory is beyond the
+                  scope of the paper.}
+}
+
+@Article{Welc+:2006:CCPE,
+  author =       {Adam Welc and Suresh Jagannathan and Antony L. Hosking},
+  title =        {Revocation Techniques for {J}ava Concurrency},
+  journal =      {Concurrency and Computation --- Practice and Experience},
+  year =         2006,
+  volume =       18,
+  number =       2,
+  pages =        {1613--1656},
+  month =        oct,
+  doi =          {10.1002/cpe.1008},
+  abstract =     {This paper proposes two approaches to managing concurrency
+                  in Java using a <em>guarded region</em> abstraction. Both
+                  approaches use <em>revocation</em> of such regions—the
+                  ability to <em>undo</em> their effects automatically and
+                  transparently. These new techniques alleviate many of the
+                  constraints that inhibit construction of transparently
+                  scalable and robust concurrent applications. The first
+                  solution, <em>revocable monitors</em>, augments existing
+                  mutual exclusion monitors with the ability to dynamically
+                  resolve priority inversion and deadlock, by reverting
+                  program execution to a consistent state when such situations
+                  are detected, while preserving Java semantics. The second
+                  technique, <em>transactional monitors</em>, extends the
+                  functionality of revocable monitors by implementing guarded
+                  regions as lightweight transactions that can be executed
+                  concurrently (or in parallel on multiprocessor
+                  platforms). The presentation includes discussion of design
+                  and implementation issues for both schemes, as well as a
+                  detailed performance study to compare their behavior with
+                  the traditional, state-of-the-art implementation of Java
+                  monitors based on mutual exclusion.}
+}
+
+@Article{Jagannathan+2005SCP,
+  author =       {Suresh Jagannathan and Jan Vitek and Adam Welc and Antony
+                  Hosking},
+  title =        {A Transactional Object Calculus},
+  journal =      {Science of Computer Programming},
+  year =         2005,
+  volume =       57,
+  number =       2,
+  pages =        {164--186},
+  month =        aug,
+  doi =          {10.1016/j.scico.2005.03.001},
+  abstract =     {A transaction defines a locus of computation that satisfies
+                  important concurrency and failure properties. These
+                  so-called ACID properties provide strong serialization
+                  guarantees that allow us to reason about concurrent and
+                  distributed programs in terms of higher-level units of
+                  computation (e.g., transactions) rather than lower-level
+                  data structures (e.g., mutual-exclusion locks). This paper
+                  presents a framework for specifying the semantics of a
+                  transactional facility integrated within a host programming
+                  language. The TFJ calculus, an object calculus derived from
+                  Featherweight Java, supports nested and multi-threaded
+                  transactions. We give a semantics to TFJ that is
+                  parametrized by the definition of the transactional
+                  mechanism that permits the study of different transaction
+                  models. We give two instantiations: one that defines
+                  transactions in terms of a versioning-based optimistic
+                  concurrency model, and the other which specifies
+                  transactions in terms of a pessimistic two-phase locking
+                  protocol, and present soundness and serializability
+                  properties for our semantics.}
+}
+
+@Article{VanDrunenHosking2004SPE,
+  author =       {Thomas VanDrunen and Antony L. Hosking},
+  title =        {Anticipation-Based Partial Redundancy Elimination for Static
+                  Single Assignment Form},
+  journal =      {Software --- Practice and Experience},
+  year =         2004,
+  volume =       34,
+  number =       15,
+  pages =        {1413--1439},
+  month =        dec,
+  doi =          {10.1002/spe.618},
+  abstract =     {Partial redundancy elimination (PRE) is a program
+                  transformation that identifies and eliminates expressions
+                  that are redundant on at least one (but not necessarily all)
+                  execution paths of a program without increasing any path
+                  length. Chow, Kennedy and co-workers devised an algorithm
+                  (SSAPRE) for performing partial redundancy elimination on
+                  intermediate representations in static single assignment
+                  (SSA) form. The practicality of that algorithm is limited by
+                  the following concerns: (1) it makes assumptions about the
+                  namespace that are stronger than those of SSA form and that
+                  may not be valid if other optimizations have already been
+                  performed on the program; (2) if redundancies occur in
+                  nested expressions, the algorithm may expose but not
+                  eliminate them (requiring a second pass of the algorithm);
+                  (3) it misses cases covered by the state of the art in PRE;
+                  and (4) it is difficult to understand and implement. We
+                  present an algorithm (A-SSAPRE) structurally similar to
+                  SSAPRE that uses anticipation rather than availability; this
+                  algorithm is simpler than SSAPRE, covers more cases,
+                  eliminates nested redundancies on a single pass, and makes
+                  no assumptions about the namespace. }
+}
+
+@Article{Hosking+2001SPE,
+  author =       {Antony L. Hosking and Nate Nystrom and David Whitlock and
+                  Quintin Cutts and Amer Diwan},
+  title =        {Partial Redundancy Elimination for Access Path Expressions},
+  journal =      {Software --- Practice and Experience},
+  year =         2001,
+  volume =       31,
+  number =       6,
+  pages =        {577--600},
+  month =        may,
+  doi =          {10.1002/spe.371},
+  abstract =     {Pointer traversals pose significant overhead to the
+                  execution of object-oriented programs, since every access to
+                  an object’s state requires a pointer
+                  dereference. Eliminating redundant pointer traversals
+                  reduces both instructions executed as well as redundant
+                  memory accesses to relieve pressure on the memory
+                  subsystem. We describe an approach to elimination of
+                  redundant access expressions that combines partial
+                  redundancy elimination (PRE) with type-based alias analysis
+                  (TBAA). To explore the potential of this approach we have
+                  implemented an optimization framework for Java class files
+                  incorporating TBAA-based PRE over pointer access
+                  expressions. The framework is implemented as a
+                  class-file-to-class-file transformer; optimized classes can
+                  then be run in any standard Java execution environment. Our
+                  experiments demonstrate improvements in the execution of
+                  optimized code for several Java benchmarks running in
+                  diverse execution environments: the standard interpreted JDK
+                  virtual machine, a virtual machine using ‘just-in-time’
+                  compilation, and native binaries compiled off-line
+                  (‘way-ahead-of-time’). Overall, however, our experience is
+                  of mixed success with the optimizations, mainly because of
+                  the isolation between our optimizer and the underlying
+                  execution environments which prevents more effective
+                  cooperation between them. We isolate the impact of access
+                  path PRE using TBAA, and demonstrate that Java’s requirement
+                  of precise exceptions can noticeably impact code-motion
+                  optimizations like PRE.}
+}
+
+@InProceedings{Wang+2015SNAPL,
+  author =       {Kunshan Wang and Yi Lin and Stephen M. Blackburn and Michael
+                  Norrish and Antony L. Hosking},
+  title =        {Draining the Swamp: Micro Virtual machines as Solid
+                  Foundation for Language Development},
+  booktitle =    {Inaugural Summit on Advances in Programming Languages},
+  year =         2015,
+  series =       {SNAPL},
+  month =        may,
+  address =      {Asilomar, California},
+  doi =          {10.4230/LIPIcs.SNAPL.2015.321},
+  abstract =     {Many of today’s programming languages are broken. Poor
+                  performance, lack of features and hard-to-reason-about
+                  semantics can cost dearly in software maintenance and
+                  inefficient execution. The problem is only getting worse
+                  with programming languages proliferating and hardware
+                  becoming more complicated. An important reason for this
+                  brokenness is that much of language design is
+                  implementation-driven. The difficulties in implementation
+                  and insufficient understanding of concepts bake bad
+                  designs into the language itself. Concurrency, architectural
+                  details and garbage collection are three fundamental
+                  concerns that contribute much to the complexities of
+                  implementing managed languages.  <p> We propose the
+                  <em>micro virtual machine</em>, a thin abstraction designed
+                  specifically to relieve implementers of managed languages of
+                  the most fundamental implementation challenges that
+                  currently impede good design. The micro virtual machine
+                  targets abstractions over memory (garbage collection),
+                  architecture (compiler backend), and concurrency. We
+                  motivate the micro virtual machine and give an account of
+                  the design and initial experience of a concrete instance,
+                  which we call Mu, built over a two year period. Our goal is
+                  to remove an important barrier to performant and
+                  semantically sound managed language design and
+                  implementation.}
+}
+
+@InProceedings{Hussein+2015SYSTOR,
+  author =       {Ahmed Hussein and Mathias Payer and Antony L. Hosking and
+                  Christopher A. Vick},
+  title =        {Impact of GC Design on Power and Performance for Android},
+  booktitle =    {ACM International Systems and Storage Conference},
+  year =         2015,
+  series =       {SYSTOR},
+  month =        may,
+  address =      {Haifa, Israel},
+  doi =          {10.1145/2757667.2757674},
+  abstract =     {Small mobile devices have evolved to versatile computing
+                  systems. Android devices run a complete software stack,
+                  including a full Linux kernel, user land with several
+                  software daemons and a virtual machine to run
+                  applications. On these mobile systems energy is a scarce
+                  resource and needs to be handled carefully. Current systems
+                  rely on governors that adjust the frequency of individual
+                  cores depending on the system load.<p> We measure energy
+                  consumption of different components of this complex software
+                  stack, including <em>garbage collection</em> (GC) of the
+                  Android virtual machine. Here we propose several extensions
+                  to the default GC configuration of Android, including a
+                  generational collector, across established dimensions of
+                  heap memory size and concurrency.<p> Our evaluation shows
+                  that Android’s asynchronous GC thread consumes a significant
+                  amount of energy. Therefore, varying the GC strategy can
+                  reduce total on-chip energy (by 20–30\%) whilst slightly
+                  impacting application throughput (by 10–40\%) and increasing
+                  worst-case pause times (by 20–30\%). Our work quantifies the
+                  direct impact of GC on mobile system, enumerates the main
+                  factors and layers of this relationship, and offers a guide
+                  for analysis of memory behavior in understanding and tuning
+                  system performance.}
+}
+
+@InProceedings{Lin+2015ISMM,
+  author =       {Yi Lin and Kunshan Wang and Stephen M. Blackburn and Antony
+                  L. Hosking and Michael Norrish},
+  title =        {Stop and Go: Understanding Yieldpoint Behavior},
+  booktitle =    {ACM SIGPLAN International Symposium on Memory Management},
+  year =         2015,
+  month =        jun,
+  address =      {Portland, Oregon},
+  doi =          {10.1145/10.1145/2754169.2754187},
+  abstract =     {Yieldpoints are critical to the implementation of high
+                  performance garbage collected languages, yet the design
+                  space is not well understood. Yieldpoints allow a running
+                  program to be interrupted at well-defined points in its
+                  execution, facilitating exact garbage collection, biased
+                  locking, on-stack replacement, profiling, and other
+                  important virtual machine behaviors. In this paper we
+                  identify and evaluate yieldpoint design choices, including
+                  previously undocumented designs and optimizations. One of
+                  the designs we identify opens new opportunities for very low
+                  overhead profiling. We measure the frequency with which
+                  yieldpoints are executed and establish a methodology for
+                  evaluating the common case execution time overhead. We also
+                  measure the median and worst case time-to-yield. We find
+                  that Java benchmarks ex- ecute about 100 M yieldpoints per
+                  second, of which about 1/20 000 are taken. The average
+                  execution time overhead for untaken yieldpoints on the VM we
+                  use ranges from 2.5\% to close to zero on modern hardware,
+                  depending on the design, and we find that the designs trade
+                  off total overhead with worst case time-to-yield. This
+                  analysis gives new insight into a critical but overlooked
+                  aspect of garbage collector implementation, and identifies a
+                  new optimization and new opportunities for very low overhead
+                  profiling.}
+}
+
+@InProceedings{Hussein+2015ISMM,
+  author =       {Ahmed Hussein and Antony L. Hosking and Mathias Payer and
+                  Christopher A. Vick},
+  title =        {Don’t Race the Memory Bus: Taming the GC Leadfoot},
+  booktitle =    {ACM SIGPLAN International Symposium on Memory Management},
+  year =         2015,
+  month =        jun,
+  address =      {Portland, Oregon},
+  doi =          {10.1145/2754169.2754182},
+  abstract =     {Dynamic voltage and frequency scaling (DVFS) is ubiquitous
+                  on mobile devices as a mechanism for saving energy. Reducing
+                  the clock frequency of a processor allows a corresponding
+                  reduction in power consumption, as does turning off idle
+                  cores. Garbage collection is a canonical example of the sort
+                  of memory-bound workload that best responds to such
+                  scaling. Here, we explore the impact of frequency scaling
+                  for garbage collection in a real mobile device running
+                  Android’s Dalvik virtual machine, which uses a concurrent
+                  collector. By controlling the frequency of the core on which
+                  the concurrent collector thread runs we can reduce power
+                  significantly. Running established multi-threaded benchmarks
+                  shows that total processor energy can be reduced up to 30\%,
+                  with end-to-end performance loss of at most 10\%.}
+}
+
+@InProceedings{Gammie+2015PLDI,
+  author =       {Peter Gammie and Antony L. Hosking and Kai Engelhardt},
+  title =        {Relaxing Safely: Verified On-the-Fly Garbage Collection for
+                  x86-TSO},
+  booktitle =    {ACM SIGPLAN International Conference on Programming Language
+                  Design and Implementation},
+  year =         2015,
+  month =        jun,
+  address =      {Portland, Oregon},
+  doi =          {10.1145/2737924.2738006},
+  abstract =     {We report on a machine-checked verification of safety for a
+                  state-of-the-art, on-the-fly, concurrent, mark-sweep garbage
+                  collector that is designed for multi-core architectures with
+                  weak memory consistency. The proof explicitly incorporates
+                  the relaxed memory semantics of x86 multiprocessors. To our
+                  knowledge, this is the first fully machine-checked proof of
+                  safety for such a garbage collector. We couch the proof in a
+                  framework that system implementers will find appealing, with
+                  the fundamental components of the system specified in a
+                  simple and intuitive programming language. The abstract
+                  model is detailed enough for its correspondence with an
+                  assembly language implementation to be straightforward.}
+}
+
+@InCollection{Gammie+2015AFP,
+  author =       {Peter Gammie and Antony L. Hosking and Kai Engelhardt},
+  title =        {Relaxing Safely: Verified On-the-Fly Garbage Collection for
+                  x86-TSO},
+  booktitle =    {Archive of Formal Proofs},
+  month =        apr,
+  year =         2015,
+  url =          {http://afp.sourceforge.net/entries/ConcurrentGC.shtml},
+  abstract =     {We use ConcurrentIMP to model Schism, a state-of-the-art
+                  real-time garbage collection scheme for weak memory, and
+                  show that it is safe on x86-TSO.  This development
+                  accompanies the PLDI 2015 paper of the same name.}
+}
+
+@InProceedings{Chapman+2014PPPJ,
+  author =       {Keith Chapman and Antony L. Hosking and J. Eliot B. Moss and
+                  Tim Richards},
+  title =        {Closed and Open Nested Atomic Actions for {J}ava: Language
+                  Design and Prototype Implementation},
+  booktitle =    {International Conference on the Principles and Practice of
+                  Programming on the Java platform: virtual machines,
+                  languages, and tools},
+  year =         2014,
+  series =       {PPPJ},
+  pages =        {169--180},
+  month =        sep,
+  address =      {Cracow, Poland},
+  doi =          {10.1145/2647508.2647525},
+  abstract =     {We describe the design and prototype implementation of a
+                  dialect of Java, XJ, that supports both closed and open
+                  nested transactions. As we have previously advocated, open
+                  nesting most naturally attaches to the <em>class</em> as the
+                  primary abstraction mechanism of Java. The resulting design
+                  allows natural expression of layered abstractions for
+                  concurrent data structures, while promoting improved
+                  concurrency for operations on those abstractions. Moreover,
+                  we describe our approach to constructing a prototype
+                  implementation of XJ that runs on standard Java virtual
+                  machines, by grafting support for transactions onto both
+                  application code and library code via load-time bytecode
+                  rewriting, for full execution coverage. We rely on
+                  extensions to the <tt>javac</tt> compiler, a JVMTI run-time
+                  agent to intercept and rewrite Java classes as they are
+                  loaded into the virtual machine, and a run-time library that
+                  tracks and manages all transaction meta-data. The resulting
+                  prototype will allow further exploration of implementation
+                  alternatives for open and closed nested transactions in
+                  Java. Our design also addresses the issue of internal
+                  deadlock caused by accessing the same data in both closed
+                  and open nesting fashion by carefully disallowing such
+                  access.}
+}
+
+@InProceedings{Yang+2012ISMM,
+  author =       {Xi Yang and Stephen M. Blackburn and Daniel Frampton and
+                  Antony L. Hosking},
+  title =        {Barriers Reconsidered, Friendlier Still!},
+  booktitle =    {ACM SIGPLAN International Symposium on Memory Management},
+  year =         2012,
+  pages =        {37--48},
+  month =        jun,
+  address =      {Beijing, China},
+  doi =          {10.1145/2258996.2259004},
+  abstract =     {Read and write barriers mediate access to the heap allowing
+                  the collector to control and monitor mutator actions. For
+                  this reason, barriers are a powerful tool in the design of
+                  any heap management algorithm, but the prevailing wisdom is
+                  that they impose significant costs. However, changes in
+                  hardware and workloads make these costs a moving
+                  target. Here, we measure the cost of a range of useful
+                  barriers on a range of modern hardware and workloads. We
+                  confirm some old results and overturn others. We evaluate
+                  the microarchitectural sensitivity of barrier performance
+                  and the differences among benchmark suites. We also consider
+                  barriers in context, focusing on their behavior when used in
+                  combination, and investigate a known pathology and evaluate
+                  solutions. Our results show that read and write barriers
+                  have average overheads as low as 5.4\% and 0.9\%
+                  respectively. We find that barrier overheads are more
+                  exposed on the workload provided by the modern DaCapo
+                  benchmarks than on old SPECjvm98 benchmarks. Moreover, there
+                  are differences in barrier behavior between in-order and
+                  out-of-order machines, and their respective memory
+                  subsystems, which indicate different barrier choices for
+                  different platforms. These changing costs mean that
+                  algorithm designers need to reconsider their design choices
+                  and the nature of their resulting algorithms in order to
+                  exploit the opportunities presented by modern hardware.}
+}
+
+@InProceedings{Pizlo+2011PPPJ,
+  author =       {Filip Pizlo and Daniel Frampton and Antony L. Hosking},
+  title =        {Fine-Grained Adaptive Biased Locking},
+  booktitle =    {International Conference on the Principles and Practice of
+                  Programming on the Java platform: virtual machines,
+                  languages, and tools},
+  year =         2011,
+  pages =        {171--181},
+  month =        aug,
+  address =      {Kongens Lyngby, Denmark},
+  doi =          {10.1145/2093157.2093184},
+  abstract =     {Mutual-exclusion locking is the prevailing technique for
+                  protecting shared resources in concurrent
+                  programs. Fine-grained locking maximizes the opportunities
+                  for concurrent execution while preserving correctness, but
+                  increases both the number of locks and the frequency of lock
+                  operations. Adding to the frequency of these operations is
+                  the practice of using locks <em>defensively</em> --- such as
+                  in library code designed for use in both concurrent and
+                  single-threaded scenarios. If the library does not protect
+                  itself with locks, an engineering burden is placed on the
+                  library’s users; if the library does use locks, it punishes
+                  those who use it only from a single thread. Biased locking
+                  is a dynamic protocol for eliminating this trade-off, in
+                  which the underlying run-time system optimizes lock
+                  operations by biasing a lock to a specific thread when the
+                  lock is dynamically found to be thread-local. Biased locking
+                  protocols are distinguished by how many opportunities for
+                  optimization are found, and what performance trade-offs for
+                  non-local locks are experienced. Of particular concern is
+                  the relatively high cost involved in revoking the bias of a
+                  lock, which makes existing biased locking protocols
+                  susceptible to performance pathologies for programs with
+                  specific patterns of contention.  <p> This work presents the
+                  biased locking protocol used in Jikes RVM, a high-throughput
+                  Java virtual machine. The protocol, dubbed FABLE, builds on
+                  prior work by adding per-object-instance dynamic adaptation
+                  and inexpensive bias revocation. We describe the protocol,
+                  detail how it was implemented, and use it in offering the
+                  most thorough evaluation of Java locking protocols to
+                  date. FABLE is shown to provide speed-ups over traditional
+                  Java locking across a broad spectrum of benchmarks while
+                  being robust to cases previous protocols handled poorly.}
+}
+
+@InProceedings{Chapman+2011X10,
+  author =       {Keith Chapman and Ahmed Hussein and Antony L. Hosking},
+  title =        {X10 on the Single-Chip Cloud Computer},
+  booktitle =    {PLDI X10 Workshop},
+  year =         2011,
+  pages =        {7:1--8},
+  month =        jun,
+  address =      {San Jose, California},
+  doi =          {10.1145/2212736.2212743},
+  abstract =     {The Single-Chip Cloud Computer (SCC) is an experimental
+                  processor created by Intel Labs. SCC is essentially a
+                  ‘cluster-on-a-chip’, so X10 with its support for places and
+                  remote asynchronous invocations is a natural fit for
+                  programming this platform. We report here on our experience
+                  porting X10 to the SCC, and show performance and scaling
+                  results for representative X10 benchmark applications. We
+                  compare results for our extensions to the SCC native
+                  messaging primitives in support of the X10 run-time, versus
+                  X10 on top of a prototype MPI API for SCC. The native SCC
+                  run-time exhibits better performance and scaling than the
+                  MPI binding. Scaling depends on the relative cost of
+                  computation versus communication in the workload used, since
+                  SCC is relatively underpowered for computation but has
+                  hardware support for message passing.}
+}
+
+@InProceedings{Pizlo+2010PLDI,
+  author =       {Filip Pizlo and Lukasz Ziarek and Petr Maj and Antony
+                  L. Hosking and Ethan Blanton and Jan Vitek},
+  title =        {Schism: Fragmentation-Tolerant Real-Time Garbage Collection},
+  booktitle =    {ACM SIGPLAN International Conference on Programming Language
+                  Design and Implementation},
+  year =         2010,
+  pages =        {146--159},
+  month =        jun,
+  address =      {Toronto, Canada},
+  doi =          {10.1145/1806596.1806615},
+  abstract =     {Managed languages such as Java and C\# are being considered
+                  for use in hard real-time systems. A hurdle to their
+                  widespread adoption is the lack of garbage collection
+                  algorithms that offer predictable space-and-time performance
+                  in the face of fragmentation. We introduce SCHISM/CMR, a new
+                  concurrent and real-time garbage collector that is
+                  fragmentation tolerant and guarantees time-and-space
+                  worst-case bounds while providing good
+                  throughput. SCHISM/CMR combines mark-region collection of
+                  fragmented objects and arrays (arraylets) with separate
+                  replication-copying collection of immutable arraylet spines,
+                  so as to cope with external fragmentation when running in
+                  small heaps. We present an implementation of SCHISM/CMR in
+                  the Fiji VM, a high-performance Java virtual machine for
+                  mission-critical systems, along with a thorough experimental
+                  evaluation on a wide variety of architectures, including
+                  server-class and embedded systems. The results show that
+                  SCHISM/CMR tolerates fragmentation better than previous
+                  schemes, with a much more acceptable throughput penalty.}
+}
+
+@InProceedings{Hellyer+2010ISMM,
+  author =       {Laurence Hellyer and Richard Jones and Antony L. Hosking},
+  title =        {The Locality of Concurrent Write Barriers},
+  booktitle =    {ACM SIGPLAN International Symposium on Memory Management},
+  year =         2010,
+  pages =        {83--92},
+  month =        jun,
+  address =      {Toronto, Canada},
+  doi =          {10.1145/1806651.1806666},
+  abstract =     {Concurrent and incremental collectors require barriers to
+                  ensure correct synchronisation between mutator and
+                  collector. The overheads imposed by particular barriers on
+                  particular systems have been widely studied. Somewhat fewer
+                  studies have also compared barriers in terms of their
+                  termination properties or the volume of floating garbage
+                  they generate. Until now, the consequences for locality of
+                  different barrier choices has not been studied, although
+                  locality will be of increasing importance for emerging
+                  architectures. This paper provides a study of the locality
+                  of concurrent write barriers, independent of the processor
+                  architecture, virtual machine, compiler or garbage
+                  collection algorithm.}
+}
+
+@InProceedings{Kalibera+2009RTSS,
+  author =       {Tomas Kalibera and Filip Pizlo and Antony L. Hosking and Jan
+                  Vitek},
+  title =        {Scheduling Hard Real-Time Garbage Collection},
+  booktitle =    {IEEE Real=Time Systems Symposium},
+  year =         2009,
+  pages =        {81--92},
+  month =        dec,
+  address =      {Washington, DC},
+  doi =          {10.1109/RTSS.2009.40},
+  abstract =     {Managed languages such as Java and C\# are increasingly
+                  being considered for hard real-time applications because of
+                  their productivity and software engineering
+                  advantages. Automatic memory management, or garbage
+                  collection, is a key enabler for robust, reusable libraries,
+                  yet remains a challenge for analysis and implementation of
+                  real-time execution environments. This paper comprehensively
+                  compares the two leading approaches to hard real-time
+                  garbage col- lection. While there are many design decisions
+                  involved in selecting a real-time garbage collection
+                  algorithm, for time-based garbage collectors researchers and
+                  practitioners remain undecided as to whether to choose
+                  <em>periodic scheduling</em> or <em>slack-based
+                  scheduling</em>. A significant impediment to valid
+                  experimental comparison is that the commercial
+                  implementations use completely different proprietary
+                  infrastructures. Here, we present Minuteman, a framework for
+                  experimenting with real-time collection algorithms in the
+                  context of a high-performance execution environment for
+                  real-time Java. We provide the first comparison of the two
+                  approaches, both experimentally using realistic workloads,
+                  and analytically in terms of schedulability.}
+}
+
+@InProceedings{McGachey+2009GPCE,
+  author =       {Phil McGachey and Antony L. Hosking and J. Eliot B. Moss},
+  title =        {Classifying {J}ava Class Transformations for Pervasive
+                  Virtualized Access},
+  booktitle =    {ACM SIGPLAN Conference on Generative Programming and
+                  Component Engineering},
+  year =         2009,
+  pages =        {75--84},
+  month =        oct,
+  address =      {Denver, Colorado},
+  doi =          {10.1145/1621607.1621620},
+  abstract =     {The indirection of object accesses is a common theme for
+                  target domains as diverse as transparent distribution,
+                  persistence, and program instrumentation. Virtualizing
+                  accesses to fields and methods (by redirecting calls through
+                  accessor and indirection methods) allows interposition of
+                  arbitrary code, extending the functionality of an
+                  application beyond that intended by the original
+                  developer. <p> We present class modifications performed by
+                  our RuggedJ transparent distribution platform for standard
+                  Java virtual machines. RuggedJ abstracts over the location
+                  of objects by implementing a single object model for local
+                  and remote objects. However the implementation of this model
+                  is complicated by the presence of native and system code;
+                  classes loaded by Java’s bootstrap class loader can be
+                  rewritten only in a limited manner, and so cannot be
+                  modified to conform to RuggedJ’s complex object model. We
+                  observe that system code comprises the majority of a given
+                  Java application: an average of 76\% in the applications we
+                  study. We consider the constraints imposed upon pervasive
+                  class transformation within Java, and present a framework
+                  for systematically rewriting arbitrary applications. Our
+                  system accommodates all system classes, allowing both user
+                  and system classes alike to be referenced using a single
+                  object model.}
+}
+
+@InProceedings{McGachey2009BYTECODE,
+  author =       {Phil McGachey and Antony L. Hosking and J. Eliot B. Moss},
+  title =        {Pervasive Load-Time Transformation for Transparently
+                  Distributed Java},
+  booktitle =    {International Workshop on Bytecode Semantics, Verification,
+                  Analysis and Transformation},
+  year =         2009,
+  month =        mar,
+  address =      {York, England},
+  abstract =     {The transformation of large, off-the-shelf Java applications
+                  to support complex new functionality essentially requires
+                  generation of an entirely new application that retains the
+                  execution semantics of the original. We describe such a
+                  whole-program modification in the context of RuggedJ, a
+                  dynamic transparent Java distribution system.<p> We discuss
+                  the proxy-based object model that allows remote Java objects
+                  to be referenced in the same way as those residing on the
+                  current virtual machine, the optimizations that allow us to
+                  bypass proxies in the case of purely local or remote object,
+                  and the mechanisms needed to guarantee that static data
+                  remain unique in a distributed system. We then detail some
+                  of the more interesting features involved when implementing
+                  this object model in rewritten bytecode, including
+                  transformations required within method bodies and
+                  coordination between bytecode and the run-time system that
+                  distributes an application across the network.}
+}
+
+@InProceedings{Hambrusch+2009CSE,
+  author =       {Susanne E. Hambrusch and Christoph Hoffmann and John T. Korb
+                  and Mark Haugan and Antony L. Hosking},
+  title =        {A Multidisciplinary Approach Towards Computational Thinking
+                  for Science Majors},
+  booktitle =    {ACM SIGCSE Technical Symposium on Computer Science
+                  Education},
+  year =         2009,
+  pages =        {183--187},
+  month =        mar,
+  address =      {Chattanooga, Tennessee},
+  doi =          {10.1145/1508865.1508931},
+  abstract =     {This paper describes the development and initial evaluation
+                  of a new course “Introduction to Computational Thinking”
+                  taken by science majors to fulfill a college computing
+                  requirement. The course was developed by computer science
+                  faculty in collaboration with science faculty and it focuses
+                  on the role of computing and computational principles in
+                  scientific inquiry. It uses Python and Python libraries to
+                  teach computational thinking via basic programming concepts,
+                  data management concepts, simulation, and
+                  visualization. Problems with a computational aspect are
+                  drawn from different scientific disciplines and are
+                  complemented with lectures from faculty in those areas. Our
+                  initial evaluation indicates that the problem-driven
+                  approach focused on scientific discovery and computational
+                  principles increases the student’s interest in computing.}
+}
+
+@InProceedings{Pizlo+2007LCTES,
+  author =       {Filip Pizlo and Antony L. Hosking and Jan Vitek},
+  title =        {Hierarchical Real-Time Garbage Collection},
+  booktitle =    {ACM SIGPLAN/SIGBED Conference on Languages, Compilers, and
+                  Tools for Embedded Systems},
+  year =         2007,
+  pages =        {123--133},
+  month =        jun,
+  address =      {San Diego, California},
+  doi =          {10.1145/1254766.1254784},
+  abstract =     {Memory management is a critical issue for correctness and
+                  performance in real-time embedded systems. Recent work on
+                  real-time garbage collectors has shown that it is possible
+                  to provide guarantees on worst-case pause times and minimum
+                  mutator utilization time. This paper presents a new
+                  <em>hierarchical</em> real-time garbage collection algorithm
+                  for mixed-priority and mixed-criticality environments. With
+                  hierarchical garbage collection, real-time programmers can
+                  partition the heap into a number of <em>heaplets</em> and
+                  for each partition choose to run a separate collector with a
+                  schedule that matches the allocation behavior and footprint
+                  of the real-time task using it. This approach lowers
+                  worst-case response times of real-time applications by 26\%,
+                  while almost doubling mutator utilization --- all with only
+                  minimal changes to the application code.}
+}
+
+@InProceedings{Ni+2007PPoPP,
+  author =       {Yang Ni and Vijay Menon and Ali-Reza Adl-Tabatabai and Antony
+                  L. Hosking and Richard L. Hudson and J. Eliot B. Moss and
+                  Bratin Saha and Tatiana Shpeisman},
+  title =        {Open Nesting in Software Transactional Memory},
+  booktitle =    {ACM SIGPLAN Symposium on Principles and Practice of Parallel
+                  Programming},
+  year =         2007,
+  pages =        {68--78},
+  month =        mar,
+  address =      {San Jose, California},
+  doi =          {10.1145/1229428.1229442},
+  abstract =     {Transactional memory (TM) promises to simplify concurrent
+                  programming while providing scalability competitive to
+                  fine-grained locking. Language-based constructs allow
+                  programmers to denote atomic regions declaratively and to
+                  rely on the underlying system to provide transactional
+                  guarantees along with concurrency. In contrast with
+                  fine-grained locking, TM allows programmers to write simpler
+                  programs that are composable and deadlock-free.<p> TM
+                  implementations operate by tracking loads and stores to
+                  memory and by detecting concurrent conflicting accesses by
+                  different transactions. By automating this process, they
+                  greatly reduce the programmer’s burden, but they also are
+                  forced to be conservative. In certain cases, conflicting
+                  memory accesses may not actually violate the higher-level
+                  semantics of a program, and a programmer may wish to allow
+                  seemingly conflicting transactions to execute
+                  concurrently.<p> <em>Open nested transactions</em> enable
+                  expert programmers to differentiate between physical
+                  conflicts, at the level of memory, and logical conflicts
+                  that actually violate application semantics. A TM system
+                  with open nesting can permit physical conflicts that are not
+                  logical conflicts, and thus increase concurrency among
+                  application threads.<p> Here we present an implementation of
+                  open nested transactions in a Java-based software
+                  transactional memory (STM) system. We describe new language
+                  constructs to support open nesting in Java, and we discuss
+                  new abstract locking mechanisms that a programmer can use to
+                  prevent logical conflicts. We demonstrate how these
+                  constructs can be mapped efficiently to existing STM data
+                  structures. Finally, we evaluate our system on a set of Java
+                  applications and data structures, demonstrating how open
+                  nesting can enhance application scalability.}
+}
+
+@InProceedings{Blackburn+2006OOPSLA,
+  author =       {Stephen M. Blackburn and Robin Garner and Chris Hoffmann and
+                  Asjad M. Khan and Kathryn S. McKinley and R. Bentzur and
+                  Amer Diwan and Daniel Feinberg and Daniel Frampton and
+                  Samuel Z. Guyer and Martin Hirzel and Antony Hosking and
+                  Maria Jump and Han Lee and J. Eliot B. Moss and Aashish
+                  Phansalkar and Darko Stefanovi{\'c} and Thomas VanDrunen and
+                  Daniel von Dincklage and Ben Wiedermann},
+  title =        {The DaCapo Benchmarks: {J}ava Benchmarking Development and
+                  Analysis},
+  booktitle =    {ACM SIGPLAN Conference on Object-Oriented Programming,
+                  Systems, Languages, and Applications},
+  year =         2006,
+  pages =        {169--190},
+  month =        oct,
+  address =      {Portland, Oregon},
+  doi =          {10.1145/1167473.1167488},
+  abstract =     {Since benchmarks drive computer science research and
+                  industry product development, which ones we use and how we
+                  evaluate them are key questions for the community. Despite
+                  complex run-time tradeoffs due to dynamic compilation and
+                  garbage collection required for Java programs, many
+                  evaluations still use methodologies developed for C, C++,
+                  and Fortran. SPEC, the dominant purveyor of benchmarks,
+                  compounded this problem by institutionalizing these
+                  methodologies for their Java benchmark suite. This paper
+                  recommends benchmarking selection and evaluation
+                  methodologies, and introduces the DaCapo benchmarks, a set
+                  of open source, client-side Java benchmarks. We demonstrate
+                  that the complex interactions of (1) architecture, (2)
+                  compiler, (3) virtual machine, (4) memory management, and
+                  (5) application require more extensive evaluation than C,
+                  C++, and Fortran which stress (4) much less, and do not
+                  require (3). We use and introduce new value, time-series,
+                  and statistical metrics for static and dynamic properties
+                  such as code complexity, code size, heap composition, and
+                  pointer mutations. No benchmark suite is definitive, but
+                  these metrics show that DaCapo improves over SPEC Java in a
+                  variety of ways, including more complex code, richer object
+                  behaviors, and more demanding memory system
+                  requirements. This paper takes a step towards improving
+                  methodologies for choosing and evaluating benchmarks to
+                  foster innovation in system design and implementation for
+                  Java and other managed languages.}
+}
+
+@InProceedings{Welc+2006ECOOP,
+  author =       {Adam Welc and Antony L. Hosking and Suresh Jagannathan},
+  title =        {Transparently Reconciling Transactions with Locking for
+                  {J}ava Synchronization},
+  booktitle =    {European Conference on Object-Oriented Programming},
+  volume =       4067,
+  year =         2006,
+  pages =        {148--173},
+  month =        jul,
+  organization = {Nantes, France},
+  doi =          {10.1007/11785477_8},
+  abstract =     {Concurrent data accesses in high-level languages like Java
+                  and C\# are typically mediated using mutual-exclusion
+                  locks. Threads use locks to <em>guard</em> the operations
+                  performed while the lock is held, so that the lock’s guarded
+                  operations can never be interleaved with operations of other
+                  threads that are guarded by the same lock. This way both
+                  <em>atomicity</em> and <em>isolation</em> properties of a
+                  thread’s guarded operations are enforced. Recent proposals
+                  recognize that these properties can also be enforced by
+                  concurrency control protocols that avoid well-known problems
+                  associated with locking, by transplanting notions of
+                  <em>transactions</em> found in database systems to a
+                  programming language context. While higher-level than locks,
+                  software transactions incur significant implementation
+                  overhead. This overhead cannot be easily masked when there
+                  is little contention on the operations being guarded.<p> We
+                  show how mutual-exclusion locks and transactions can be
+                  reconciled transparently within Java’s monitor
+                  abstraction. We have implemented monitors for Java that
+                  execute using locks when contention is low and switch over
+                  to transactions when concurrent attempts to enter the
+                  monitor are detected. We formally argue the correctness of
+                  our solution with respect to Java’s execution semantics and
+                  provide a detailed performance evaluation for different
+                  workloads and varying levels of contention. We demonstrate
+                  that our implementation has low overheads in the uncontended
+                  case (7\% on average) and that significant performance
+                  improvements (up to 3×) can be achieved from running
+                  contended monitors transactionally.}
+}
+
+@InProceedings{Hosking2006ISMM,
+  author =       {Antony L. Hosking},
+  title =        {Portable, Mostly-Concurrent, Mostly-Copying Garbage
+                  Collection for Multi-Processors},
+  booktitle =    {ACM SIGPLAN International Symposium on Memory Management},
+  year =         2006,
+  pages =        {40--51},
+  month =        jun,
+  address =      {Ottawa, Canada},
+  doi =          {10.1145/1133956.1133963},
+  abstract =     {Modern commodity platforms increasingly support thread-level
+                  parallelism, which must be exploited by garbage collected
+                  applications. We describe the design and implementation of a
+                  portable <em>mostly-concurrent</em> mostly-copying garbage
+                  collector that exhibits scalable performance on
+                  multi-processors. We characterize its performance for
+                  heap-intensive workloads on two different multi-processor
+                  platforms, showing maximum pause times two orders of
+                  magnitude shorter than for fully stop-the-world collection
+                  at the cost of some total mutator throughput.}
+}
+
+@InProceedings{McGachey+2006ISMM,
+  author =       {Phil McGachey and Antony L. Hosking},
+  title =        {Reducing Generational Copy Reserve Overhead with Fallback
+                  Compaction},
+  booktitle =    {ACM SIGPLAN International Symposium on Memory Management},
+  year =         2006,
+  pages =        {17--28},
+  month =        jun,
+  address =      {Ottawa, Canada},
+  doi =          {10.1145/1133956.1133960},
+  abstract =     {As programming languages with managed runtimes become
+                  increasingly popular, it is essential that virtual machines
+                  are implemented efficiently. The performance of the memory
+                  management subsystem can be a defining factor in the
+                  performance of the virtual machine as a whole. We present
+                  a technique by which garbage collector performance can be
+                  improved.<p> We describe an algorithm that combines a
+                  standard generational copying collector with a mark and
+                  compact collector. We observe that, since most objects do
+                  not survive a garbage collection, it is not necessary to
+                  reserve space to copy them all. The result is a generational
+                  copying collector that operates with a smaller copy reserve
+                  overhead than traditional Appel-style collectors. We
+                  maintain correctness in the worst case through the use of
+                  mark and compact collection. When the reduced copy reserve
+                  overflows, a compacting phase ensures that all data are
+                  accommodated.<p> We have implemented this algorithm within
+                  the framework of Jikes RVM and MMTk. For most benchmarks
+                  examined, our experiments show that performance is
+                  comparable to or better than a standard generational copying
+                  collector.}
+}
+
+@InProceedings{Moss+2005SCOOL,
+  author =       {J. Eliot B. Moss and Antony L. Hosking},
+  title =        {Nested Transactional Memory: Model and Preliminary
+                  Architecture Sketches},
+  booktitle =    {OOPSLA Workshop on Synchronization and Concurrency in
+                  Object-Oriented Languages},
+  year =         2005,
+  pages =        {39--48},
+  month =        oct,
+  address =      {San Diego, California},
+  doi =          {1802/2099},
+  abstract =     {We offer a reference model for nested transactions at the
+                  level of memory accesses, and sketch possible hardware
+                  architecture designs that implement that model. We describe
+                  both closed and open nesting. The model is abstract in that
+                  it does not relate to hardware, such as caches, but
+                  describes memory as seen by each transaction, memory access
+                  conflicts, and the effects of commits and aborts. The
+                  hardware sketches describe approaches to implementing the
+                  model using bounded size caches in a processor with
+                  overflows to memory. In addition to a model that will
+                  support concurrency within a transaction, we describe a
+                  simpler model we call <em>linear nesting</em>. Linear
+                  nesting supports only a single thread of execution in a
+                  transaction nest, but may be easier to implement. While we
+                  hope that the model is a good target to which to compile
+                  transactions from source languages, the mapping from source
+                  constructs to nested transactional memory is beyond the
+                  scope of the paper.}
+}
+
+@InProceedings{Welc+2005OOPSLA,
+  author =       {Adam Welc and Suresh Jagannathan and Antony L. Hosking},
+  title =        {Safe Futures for {J}ava},
+  booktitle =    {ACM SIGPLAN Conference on Object-Oriented Programming,
+                  Systems, Languages, and Applications},
+  year =         2005,
+  pages =        {439--453},
+  month =        oct,
+  address =      {San Diego, California},
+  doi =          {10.1145/1094811.1094845},
+  abstract =     {A future is a simple and elegant abstraction that allows
+                  concurrency to be expressed often through a relatively small
+                  rewrite of a sequential program. In the absence of
+                  side-effects, futures serve as benign annotations that mark
+                  potentially concurrent regions of code. Unfortunately, when
+                  computation relies heavily on mutation as is the case in
+                  Java, its meaning is less clear, and much of its intended
+                  simplicity lost.<p> This paper explores the definition and
+                  implementation of safe futures for Java. One can think of
+                  safe futures as truly transparent annotations on method
+                  calls, which designate opportunities for concurrency. Serial
+                  programs can be made concurrent simply by replacing standard
+                  method calls with future invocations. Most significantly,
+                  even though some parts of the program are executed
+                  concurrently and may indeed operate on shared data, the
+                  semblance of serial execution is nonetheless
+                  preserved. Thus, program reasoning is simplified since data
+                  dependencies present in a sequential program are not
+                  violated in a version augmented with safe futures.<p>
+                  Besides presenting a programming model and API for safe
+                  futures, we formalize the safety conditions that must be
+                  satisfied to ensure equivalence between a sequential Java
+                  program and its future-annotated counterpart. A detailed
+                  implementation study is also provided. Our implementation
+                  exploits techniques such as object versioning and task
+                  revocation to guarantee necessary safety conditions. We also
+                  present an extensive experimental evaluation of our
+                  implementation to quantify overheads and limitations. Our
+                  experiments indicate that for programs with modest mutation
+                  rates on shared data, applications can use futures to
+                  profitably exploit parallelism, without sacrificing safety.}
+}
+
+@InProceedings{Cher+2004ASPLOS,
+  author =       {Chen-Yong Cher and Antony L. Hosking and T. N. Vijaykumar},
+  title =        {Software Prefetching for Mark-Sweep Garbage Collection:
+                  Hardware Analysis and Software Redesign},
+  booktitle =    {ACM International Conference on Architectural Support for
+                  Programming Languages and Operating Systemes},
+  year =         2004,
+  pages =        {199--210},
+  month =        oct,
+  address =      {Boston, Massachusetts},
+  doi =          {10.1145/1024393.1024417},
+  abstract =     {Tracing garbage collectors traverse references from live
+                  program variables, transitively tracing out the closure of
+                  live objects. Memory accesses incurred during tracing are
+                  essentially random: a given object may contain references to
+                  any other object. Since application heaps are typically much
+                  larger than hardware caches, tracing results in many cache
+                  misses. Technology trends will make cache misses more
+                  important, so tracing is a prime target for prefetching.<p>
+                  Simulation of Java benchmarks running with the
+                  Boehm-Demers-Weiser mark-sweep garbage collector for a
+                  projected hardware platform reveal high tracing overhead (up
+                  to 65\% of elapsed time), and that cache misses are a
+                  problem. Applying Boehm’s default prefetching strategy
+                  yields improvements in execution time (16\% on average with
+                  incremental/generational collection for GC-intensive
+                  benchmarks), but analysis shows that his strategy suffers
+                  from significant timing problems: prefetches that occur too
+                  early or too late relative to their matching loads. This
+                  analysis drives development of a new prefetching strategy
+                  that yields up to three times the performance improvement of
+                  Boehm’s strategy for GC-intensive benchmarks (27\% average
+                  speedup), and achieves performance close to that of perfect
+                  timing (ie, few misses for tracing accesses) on some
+                  benchmarks. Validating these simulation results with live
+                  runs on current hardware produces average speedup of 6\% for
+                  the new strategy on GC-intensive benchmarks with a GC
+                  configuration that tightly controls heap growth. In
+                  contrast, Boehm’s default prefetching strategy is
+                  ineffective on this platform.}
+}
+
+@InProceedings{Blackburn+2004ISMM,
+  author =       {Stephen M. Blackburn and Antony L. Hosking},
+  title =        {Barriers: Friend or Foe},
+  booktitle =    {ACM SIGPLAN International Symposium on Memory Management},
+  year =         2004,
+  pages =        {143--151},
+  month =        oct,
+  address =      {Vancouver, Canada},
+  doi =          {10.1145/1029873.1029891},
+  abstract =     {Modern garbage collectors rely on read and write barriers
+                  imposed on heap accesses by the mutator, to keep track of
+                  references between different regions of the garbage
+                  collected heap, and to synchronize actions of the mutator
+                  with those of the collector. It has been a long-standing
+                  untested assumption that barriers impose significant
+                  overhead to garbage-collected applications. As a result,
+                  researchers have devoted effort to development of
+                  optimization approaches for elimination of unnecessary
+                  barriers, or proposed new algorithms for garbage collection
+                  that avoid the need for barriers while retaining the
+                  capability for independent collection of heap partitions. On
+                  the basis of the results presented here, we dispel the
+                  assumption that barrier overhead should be a primary
+                  motivator for such efforts.<p> We present a methodology for
+                  precise measurement of mutator overheads for barriers
+                  associated with mutator heap accesses. We provide a taxonomy
+                  of different styles of barrier and measure the cost of a
+                  range of popular barriers used for different garbage
+                  collectors within Jikes RVM. Our results demonstrate that
+                  barriers impose surprisingly low cost on the mutator, though
+                  results vary by architecture. We found that the average
+                  overhead for a reasonable generational write barrier was
+                  less than 2\% on average, and less than 6\% in the worst
+                  case. Furthermore, we found that the average overhead of a
+                  read barrier consisting of just an unconditional mask of the
+                  low order bits read on the PowerPC was only 0.85\%, while on
+                  the AMD it was 8.05\%. With both read and write barriers, we
+                  found that second order locality effects were sometimes more
+                  important than the overhead of the barriers themselves,
+                  leading to counter-intuitive speedups in a number of
+                  situations.}
+}
+
+@InProceedings{Welc+2004ICPP,
+  author =       {Adam Welc and Antony L. Hosking and Suresh Jagannathan},
+  title =        {Preemption-Based Avoidance of Priority Inversion for {J}ava},
+  booktitle =    {IEEE International Conference on Parallel Processing},
+  year =         2004,
+  pages =        {529--538},
+  month =        aug,
+  address =      {Montr{\'e}al, Canada},
+  doi =          {10.1109/ICPP.2004.1327963},
+  abstract =     { Priority inversion occurs in concurrent programs when
+                  low-priority threads hold shared resources needed by some
+                  high-priority thread, causing them to block
+                  indefinitely. Shared resources are usually guarded by
+                  low-level synchronization primitives such as
+                  mutual-exclusion locks, semaphores, or monitors. There are
+                  two existing solutions to priority inversion. The first,
+                  establishing high-level scheduling invariants over
+                  synchronization primitives to eliminate priority inversion a
+                  priori, is difficult in practice and undecidable in
+                  general. Alternatively, run-time avoidance mechanisms such
+                  as priority inheritance still force high-priority threads to
+                  wait until desired resources are released.<p> We describe a
+                  novel compiler and run-time solution to the problem of
+                  priority inversion, along with experimental evaluation of
+                  its effectiveness. Our approach allows preemption of any
+                  thread holding a resource needed by higher-priority threads,
+                  forcing it to release its claim on the resource, roll back
+                  its execution to the point at which the shared resource was
+                  first acquired, and discard any updates made in the
+                  interim.<p> The compiler inserts code at synchronization
+                  points, permitting rollback of thread execution, and
+                  efficient revocation of interim updates. Our design and
+                  implementation are realized in the context of IBM’s Jikes
+                  RVM, a high-quality compiler and runtime system for
+                  Java. Our performance results show that throughput of
+                  high-priority threads using our scheme can be improved by
+                  30\% to 100\% when compared with a classical scheduler that
+                  does not address priority inversion.}
+}
+
+@InProceedings{Welc+2004ECOOP,
+  author =       {Adam Welc and Suresh Jagannathan and Antony L. Hosking},
+  title =        {Transactional Monitors for Concurrent Objects},
+  booktitle =    {European Conference on Object-Oriented Programming},
+  year =         2004,
+  pages =        {519--542},
+  month =        jun,
+  address =      {Oslo, Norway},
+  doi =          {10.1007/b98195},
+  abstract =     { <em>Transactional monitors</em> are proposed as an
+                  alternative to monitors based on mutual-exclusion
+                  synchronization for object-oriented programming
+                  languages. Transactional monitors have execution semantics
+                  similar to mutual-exclusion monitors but implement monitors
+                  as lightweight transactions that can be executed
+                  concurrently (or in parallel on multiprocessors). They
+                  alleviate many of the constraints that inhibit construction
+                  of transparently scalable and robust applications.<p> We
+                  undertake a detailed study of alternative implementation
+                  schemes for transactional monitors. These different schemes
+                  are tailored to different concurrent access patterns, and
+                  permit a given application to use potentially different
+                  implementations in different contexts.<p> We also examine
+                  the performance and scalability of these alternative
+                  approaches in the context of the Jikes Research Virtual
+                  Machine, a state-of-the-art Java implementation. We show
+                  that transactional monitors are competitive with
+                  mutual-exclusion synchronization and can outperform
+                  lock-based approaches up to five times on a wide range of
+                  workloads.}
+}
+
+@InProceedings{Vitek+2004ESOP,
+  author =       {Jan Vitek and Suresh Jagannathan and Adam Welc and Antony
+                  L. Hosking},
+  title =        {A Semantic Framework for Designer Transactions},
+  booktitle =    {European Symposium on Programming},
+  year =         2004,
+  pages =        {249--263},
+  month =        {March/April},
+  address =      {Barcelona, Spain},
+  doi =          {10.1007/b96702},
+  abstract =     {A transaction defines a locus of computation that satisfies
+                  important concurrency and failure properties; these
+                  so-called ACID properties provide strong serialization
+                  guarantees that allow us to reason about concurrent and
+                  distributed programs in terms of higher-level units of
+                  computation (e.g., transactions) rather than lower-level
+                  data structures (e.g., mutual-exclusion locks). This paper
+                  presents a framework for specifying the semantics of a
+                  transactional facility integrated within a host programming
+                  language. The TFJ calculus supports nested and
+                  multi-threaded transactions. We give a semantics to TFJ that
+                  is parameterized by the definition of the transactional
+                  mechanism that permits the study of different transaction
+                  models.}
+}
+
+@InProceedings{VanDrunen+2004CC,
+  author =       {Thomas VanDrunen and Antony L. Hosking},
+  title =        {Value-Based Partial Redundancy Elimination},
+  booktitle =    {International Conference on Compiler Construction},
+  year =         2004,
+  pages =        {167--184},
+  month =        {March/April},
+  address =      {Barcelona, Spain},
+  doi =          {10.1007/b95956},
+  abstract =     {Partial redundancy elimination (PRE) is a program
+                  transformation that identifies and eliminates expressions
+                  that are redundant on at least one (but not necessarily all)
+                  execution paths. Global value numbering (GVN) is a program
+                  analysis and transformation that identifies operations that
+                  compute the same value and eliminates operations that are
+                  redundant. A weakness of PRE is that it traditionally
+                  considers only expressions that are lexically equivalent. A
+                  weakness of GVN is that it traditionally considers only
+                  operations that are fully redundant. In this paper, we
+                  examine the work that has been done on PRE and GVN and
+                  present a hybrid algorithm that combines the strengths of
+                  each. The contributions of this work are a framework for
+                  thinking about expressions and values without source-level
+                  lexical constraints, a system of data-flow equations for
+                  determining insertion points, and a practical algorithm for
+                  extending a simple hash-based GVN for PRE. Our
+                  implementation subsumes GVN statically and, on most
+                  benchmarks, in terms of performance.}
+}
+
+@Article{Mueller+2004DD,
+  author =       {Frank Mueller and Antony L. Hosking},
+  title =        {Penumbra: Simplifying {E}clipse},
+  journal =      {Dr. Dobb's Journal: Software Tools for the Professional
+                  Programmer},
+  year =         2004,
+  volume =       365,
+  pages =        {62--66},
+  month =        oct,
+  url =          {http://www.ddj.com/184405854}
+}
+
+@InProceedings{Mueller+2003ETX,
+  author =       {Frank Mueller and Antony L. Hosking},
+  title =        {Penumbra: An {E}clipse Plugin for Introductory Programming},
+  booktitle =    {OOPSLA Workshop on {E}clipse {T}echnology e{X}change},
+  year =         2003,
+  pages =        {65--68},
+  month =        oct,
+  address =      {Anaheim, California},
+  doi =          {10.1145/965660.965674},
+  abstract =     {Eclipse is a full-featured and easily extensible integrated
+                  development environment. As such, it has grown to include a
+                  large degree of functionality that may be overwhelming to
+                  the novice programmer. Nevertheless, we believe Eclipse is
+                  an environment that students of programming will come to
+                  find useful and empowering once they become familiar with
+                  it. The trick is easing them into using Eclipse without them
+                  feeling overwhelmed at the outset. Penumbra is an Eclipse
+                  plug-in developed at Purdue University for use in our
+                  introductory programming classes. It is intended to ease the
+                  transition to use of the full-featured functionality of
+                  Eclipse. Penumbra presents an Eclipse perspective that hides
+                  all but the basic actions of Eclipse’s existing Java
+                  perspective, while packaging elements of other perspectives
+                  (e.g., the CVS perspective) into simpler actions that ease
+                  the downloading and turn-in of programming assignments, and
+                  adding new code views inspired by other environments for
+                  introductory programmers. Our experiences using Eclipse with
+                  a small group of introductory programming students in the
+                  Spring of 2003 have guided the development of Penumbra,
+                  which is now being rolled out for general use by the full
+                  class of 230 students in the Fall of 2003.}
+}
+
+@InProceedings{Hirzel+2001ECOOP,
+  author =       {Martin Hirzel and Amer Diwan and Antony L. Hosking},
+  title =        {On the Usefulness of Liveness for Garbage Collection and
+                  Leak Detection},
+  booktitle =    {European Conference on Object-Oriented Programming},
+  year =         2001,
+  pages =        {181--206},
+  month =        jun,
+  address =      {Budapest, Hungary},
+  doi =          {10.1007/3-540-45337-7_11},
+  abstract =     {The effectiveness of garbage collectors and leak detectors
+                  in identifying dead objects depends on the “accuracy” of
+                  their reachability traversal. Accuracy has two orthogonal
+                  dimensions: (i) whether the reachability traversal can
+                  distinguish between pointers and non-pointers (type
+                  accuracy), and (ii) whether the reachability traversal can
+                  identify memory locations that will be dereferenced in the
+                  future (liveness accuracy). While prior work has
+                  investigated the importance of type accuracy, there has been
+                  little work investigating the importance of liveness
+                  accuracy for garbage collection or leak detection. This
+                  paper presents an experimental study of the importance of
+                  liveness on the accuracy of the reachability traversal. We
+                  show that while liveness can significantly improve the
+                  effectiveness of a garbage collector or leak detector, the
+                  simpler liveness schemes are largely ineffective. One must
+                  analyze globals using an interprocedural analysis to get
+                  significant benefit.}
+}
+
+@InProceedings{Whitlock+2000POS,
+  author =       {David Whitlock and Antony L. Hosking},
+  title =        {A Framework for Persistence-Enabled Optimization of {J}ava
+                  Object Stores},
+  booktitle =    {International Workshop on Persistent Object Systems},
+  year =         2000,
+  editor =       {Graham Kirby},
+  pages =        {4--18},
+  month =        sep,
+  address =      {Lillehammer, Norway},
+  doi =          {10.1007/3-540-45498-5_2},
+  abstract =     {Aggressive optimization of programs often relies on analysis
+                  and transformation that cuts across the natural abstraction
+                  boundaries of the source programming language, such as
+                  procedures in procedural languages, or classes in
+                  class-based object-oriented languages like
+                  Java. Unfortunately, execution environments for languages
+                  such as Java dynamically link code into the application as
+                  it executes, precluding cross-cutting analyses and
+                  optimizations that are too expensive to apply on-line.<p>
+                  Fortunately, persistent object systems usually treat the
+                  code base as an integral part of the persistent store. This
+                  code base approximates the notion of “whole-program” that
+                  has been exploited in other optimization frameworks. This
+                  paper describes an analysis and optimization framework for
+                  Java that operates against the persistent code base, and
+                  couples the results of analysis and optimization with the
+                  run-time system to ensure continued correctness of the
+                  resulting code. The framework performs extensive analysis
+                  over the code in the store, supporting optimizations that
+                  cut across class boundaries in ways that are not safe to
+                  perform off-line on stand-alone Java classes.}
+}
+
+@InProceedings{Hosking+1999OOPSLA,
+  author =       {Antony L. Hosking and Jiawan Chen},
+  title =        {Mostly-Copying Reachability-Based Orthogonal Persistence},
+  booktitle =    {ACM SIGPLAN Conference on Object-Oriented Programming,
+                  Systems, Languages, and Applications},
+  year =         1999,
+  pages =        {383--398},
+  month =        nov,
+  address =      {Denver, Colorado},
+  doi =          {10.1145/320384.320427},
+  abstract =     {We describe how reachability-based orthogonal persistence
+                  can be supported even in uncooperative implementations of
+                  languages such as C++ and Modula-3, and without modification
+                  to the compiler. Our scheme extends Bartlett’s
+                  mostly-copying garbage collector to manage both transient
+                  objects and resident persistent objects, and to compute the
+                  reachability closure necessary for stabilization of the
+                  persistent heap. It has been implemented in our prototype
+                  of reachability-based persistence for Modula-3, yielding
+                  performance competitive with that of comparable, but
+                  non-orthogonal, persistent variants of C++. Experimental
+                  results, using the OO7 object database benchmarks, reveal
+                  that the mostly-copying approach offers a straightforward
+                  path to efficient orthogonal persistence in these
+                  uncooperative environments. The results also characterize
+                  the performance of persistence implementations based on
+                  virtual memory protection primitives.}
+}
+
+@InProceedings{Hosking+1999VLDB,
+  author =       {Antony L. Hosking and Jiawan Chen},
+  title =        {PM3: An Orthogonally Persistent Systems Programming
+                  Language},
+  booktitle =    {International Conference on Very Large Data Bases},
+  year =         1999,
+  pages =        {587--598},
+  month =        sep,
+  address =      {Edinburgh, Scotland},
+  url =          {http://www.vldb.org/conf/1999/P55.pdf},
+  abstract =     {PM3 is an orthogonally persistent extension of the Modula-3
+                  systems programming language, supporting persistence by
+                  reachability from named persistent roots. We describe the
+                  design and implementation of the PM3 prototype, and show
+                  that its performance is competitive with its non-orthogonal
+                  counterparts by direct comparison with the SHORE/C++
+                  language binding to the SHORE object store. Experimental
+                  results, using the traversal portions of the OO7 benchmark,
+                  reveal that the overheads of orthogonal persistence are not
+                  inherently more expensive than for non-orthogonal
+                  persistence, and justify our claim that orthogonal
+                  persistence deserves a level of acceptance similar to that
+                  now emerging for automatic memory management (i.e., “garbage
+                  collection”), even in performance-conscious settings. The
+                  consequence will be safer and more flexible persistent
+                  systems that do not compromise performance.}
+}
+
+@InProceedings{Brahnmath+1998PJW,
+  author =       {Kumar Brahnmath and Nathaniel Nystrom and Antony Hosking and
+                  Quintin Cutts},
+  title =        {Swizzle barrier optimizations for orthogonal persistence in
+                  {J}ava},
+  booktitle =    {International Workshop on Persistence and Java},
+  year =         1998,
+  editor =       {Ron Morrison and Mick Jordan and Malcolm Atkinson},
+  series =       {Advances in Persistent Object Systems},
+  pages =        {268--278},
+  month =        aug,
+  address =      {Tiburon, California},
+  publisher =    {Morgan Kaufmann},
+  abstract =     {<em>Swizzling</em> refers to the translation of object
+                  references from an external, persistent format to an
+                  internal, transient format used during application
+                  execution. <em>Eager</em> swizzling schemes translate all
+                  the references contained by objects as they are made
+                  resident. <em>Lazy</em> swizzling schemes defer translation
+                  of references until they are loaded from their
+                  container. Eager swizzling has the advantage of presenting a
+                  uniformly swizzled representation of references to the
+                  execution engine, at the cost of up-front translation of
+                  references that may never be used. Lazy swizzling avoids
+                  this cost, but requires a run-time check called a
+                  <em>swizzle barrier</em> to detect and convert unswizzled
+                  references as they are accessed. Lazy swizzling is most
+                  often used in situations where accesses are likely to be
+                  sparse and the up-front cost of eager swizzling is
+                  prohibitive. For example, large containers, such as arrays,
+                  may contain many thousands of references, only a fraction of
+                  which are ever actually accessed, let alone used to access
+                  their target. Thus, lazy swizzling of arrays makes sense
+                  even while other types of objects are eagerly swizzled, in
+                  which case every array access must be protected by a swizzle
+                  barrier. Many, if not most, of these barriers will occur in
+                  the bodies of loops that iterate through the elements of
+                  arrays. Here, we describe how to hoist loop-nested swizzle
+                  barriers into one inclusive barrier operation that can be
+                  performed outside the loop, and which swizzles the subset of
+                  array elements accessed in the loop body. Our approach to
+                  array swizzle barrier optimization is based on loop
+                  <em>induction variable analysis</em>. We have implemented
+                  this approach for the PJama prototype of orthogonal
+                  persistence for Java. In experiments with several benchmark
+                  applications our optimizations reduce the number of swizzle
+                  barriers executed by an average of 66\%.}
+}
+
+@InProceedings{Hosking+1998POS,
+  author =       {Antony L. Hosking and Nathaniel Nystrom and Quintin Cutts
+                  and Kumar Brahnmath},
+  title =        {Optimizing the read and write barriers for orthogonal
+                  persistence},
+  booktitle =    {International Workshop on Persistent Object Systems},
+  year =         1998,
+  editor =       {Ron Morrison and Mick Jordan and Malcolm Atkinson},
+  series =       {Advances in Persistent Object Systems},
+  pages =        {149--159},
+  month =        aug,
+  address =      {Tiburon, California},
+  publisher =    {Morgan Kaufmann},
+  abstract =     {Persistent programming languages manage volatile memory as a
+                  cache for stable storage, imposing a <em>read barrier</em>
+                  on operations that access the cache, and a <em>write
+                  barrier</em> on updates to the cache. The read barrier
+                  checks the cache residency of the target object while the
+                  write barrier marks the target as dirty in the cache to
+                  support a write-back policy that defers updates to stable
+                  storage until eviction or stabilization. These barriers may
+                  also subsume additional functionality, such as negotiation
+                  of locks on shared objects to support concurrency
+                  control. Compilers for persistent programming languages
+                  generate barrier code to protect all accesses to possibly
+                  persistent objects. Orthogonal persistence imposes this cost
+                  on every object access, since all objects are potentially
+                  persistent, at significant overhead to execution. We have
+                  designed a new suite of compiler optimizations, focusing on
+                  partial redundancy elimination of pointer-based access
+                  expressions, that significantly reduce this impact. These
+                  are implemented in an analysis and optimization framework
+                  for Java bytecodes, in support of orthogonal persistence for
+                  Java. In experiments with the traversal portions of the OO7
+                  benchmark suite our optimizations reduce the number of read
+                  and write barriers executed by an average of 83\% and 25\%,
+                  respectively.  }
+}
+
+@InProceedings{Cutts+1998POS,
+  author =       {Quintin I. Cutts and Steve Lennon and Antony L. Hosking},
+  title =        {Reconciling Buffer Management with Persistence
+                  Optimizations},
+  booktitle =    {International Workshop on Persistent Object Systems},
+  year =         1998,
+  editor =       {Ron Morrison and Mick Jordan and Malcolm Atkinson},
+  series =       {Advances in Persistent Object Systems},
+  pages =        {51--63},
+  month =        aug,
+  address =      {Tiburon, California},
+  publisher =    {Morgan Kaufmann},
+  abstract =     {The so-called 'read' and 'write' barriers present an
+                  obstacle to the efficient execution of persistent programs
+                  that use a volatile object buffer, non-volatile object store
+                  memory model. The barriers, implemented as checks added to
+                  the code, are required to ensure that objects are moved from
+                  store to buffer before being used and, if updated in the
+                  buffer, that they are written back on periodic
+                  checkpoints.<p> Static read and write barrier optimisations
+                  are identified that require run-time guarantees on certain
+                  objects' remaining resident in the buffer. These objects are
+                  said to be 'pinned'. Object pinning conflicts with the
+                  buffer manager's freedom to evict objects from the buffer
+                  when it is full . A contract between the buffer manager and
+                  the code optimiser guarantees a minimum level of pinning for
+                  each thread. Beyond this guarantee, heuristics added to the
+                  buffer manager allow adjustment of the level of pinning for
+                  each thread according to the prevailing collection and
+                  individual states of threads, to minimise pinning vs object
+                  management conflicts. Optimisation of the write barrier
+                  additionally requires the buffer manager to uphold certain
+                  guarantees across checkpoint operations.<p> This paper
+                  presents the design of buffer management mechanisms to
+                  uphold the pinning and update guarantees and identifies the
+                  heuristics used to adjust the level of pinning allocated to
+                  each thread. Details of the mechanisms' implementation in
+                  the PJama system are given. Measurements show that the
+                  additional functionality does not represent a significant
+                  overhead to the operation of the system, when running the
+                  OO7 benchmark.}
+}
+
+@InProceedings{Cutts+1997PJW,
+  author =       {Quintin Cutts and Antony L. Hosking},
+  title =        {Analysing, Profiling and Optimising Orthogonal Persistence
+                  for {J}ava},
+  booktitle =    {International Workshop on Persistence and Java},
+  year =         1997,
+  editor =       {Mick Jordan and Malcolm Atkinson},
+  pages =        {107--115},
+  month =        aug,
+  address =      {Half Moon Bay, California},
+  publisher =    {Sun Microsystems Technical Report 97-63},
+  abstract =     {Persistent systems manage main memory as a cache for
+                  efficient access to frequently-accessed persistent
+                  data. Good cache management requires some knowledge of the
+                  semantics of the applications running against it. We are
+                  attacking the performance problems of persistence for Java
+                  through analysis, profiling, and optimisation of Java
+                  classes and methods executing in an orthogonally persistent
+                  setting. Knowledge of application behaviour is derived
+                  through analysis and profiling, and applied by both a static
+                  bytecode transformer and the run-time system to optimise the
+                  actions of Java programs as they execute against persistent
+                  storage. Our prototype will unify distinct persistence
+                  optimisations within a single optimisation framework,
+                  deriving its power from treatment of the entire persistent
+                  application, consisting of both program code and data stored
+                  in the database, for <em>whole-application</em> analysis,
+                  profiling and optimisation.}
+}
+
+@InProceedings{Hosking1996POS,
+  author =       {Antony L. Hosking},
+  title =        {Residency Check Elimination for Object-Oriented Persistent
+                  Languages},
+  booktitle =    {International Workshop on Persistent Object Systems},
+  year =         1996,
+  editor =       {Richard Connor and Scott Nettles},
+  pages =        {174--183},
+  month =        may,
+  address =      {Cape May, New Jersey},
+  publisher =    {Morgan Kaufmann},
+  abstract =     {We explore the ramifications of object residency assumptions
+                  and their impact on residency checking for several
+                  subroutine dispatch scenarios: procedural, static
+                  object-oriented, and dynamic (virtual) object-oriented. We
+                  obtain dynamic counts of the residency checks necessary for
+                  execution of several benchmark persistent programs under
+                  each of these scenarios. The results reveal that significant
+                  reductions in the number of residency checks can be achieved
+                  through application of residency rules derived from the
+                  dispatch scenario under which a program executes, as well as
+                  additional constraints specific to the language in which it
+                  is implemented.}
+}
+
+@InProceedings{Moss+1996PJW,
+  author =       {J. Eliot B. Moss and Antony L. Hosking},
+  title =        {Approaches to Adding Persistence to {J}ava},
+  booktitle =    {International Workshop on Persistence and Java},
+  year =         1996,
+  editor =       {Malcome Atkinson and Mick Jordan},
+  pages =        {1--6},
+  month =        sep,
+  address =      {Drymen, Scotland},
+  publisher =    {Sun Microsystems Technical Report 96-58},
+  abstract =     {We describe and name a range of approaches to adding
+                  persistence to the Java programming language. Java is
+                  interesting in this regard not only because of the current
+                  excitement over it. Some relevant properties of Java
+                  include: its blend of static and dynamic features, its
+                  incorporation of object code into the environment, its
+                  offering of automatic storage management, its
+                  standardization of the object code format, its broad (but
+                  not exclusive) use of object orientation, and its use of a
+                  standard library. In considering approaches to adding
+                  persistence to Java, we offer a preliminary evaluation of
+                  the advantages and disadvantages of the approaches, and
+                  describe some directions we are pursuing in our own
+                  developments. We hope our descriptions and evaluations will
+                  be useful to others in understanding the attributes of
+                  systems and designs to be discussed at the workshop, or
+                  considered thereafter.}
+}
+
+@InProceedings{Moss+1994POS,
+  author =       {J. Eliot B. Moss and Antony L. Hosking},
+  title =        {Expressing Object Residency Optimizations Using Pointer Type
+                  Annotations},
+  booktitle =    {International Workshop on Persistent Object Systems},
+  year =         1994,
+  editor =       {Malcolm Atkinson and David Maier and Veronique Benzaken},
+  pages =        {3--15},
+  month =        sep,
+  address =      {Tarascon, France},
+  publisher =    {Springer},
+  abstract =     {We consider some issues in optimizing persistent programming
+                  languages. In particular, we show how to express
+                  optimizations of object residency checks in strongly typed
+                  persistent languages as “annotations” on pointer
+                  types. These annotations essentially extend and refine the
+                  type system of the language, and they have at least two
+                  significant uses. First, a programmer can use them to
+                  express desired residency properties to be enforced by the
+                  language implementation (compiler plus run time). Second, we
+                  can use them to separate a persistence optimizer, which adds
+                  annotations, from the remainder of the compiler, which
+                  simply obeys them. This gives rise to a nice separation of
+                  concerns in supporting high-performance persistence: the
+                  “intelligent” optimizer can be factored off from the rest of
+                  the compiler.<p> In addition to modularity benefits, the
+                  separation allows us to explore the value of various
+                  optimizations without actually implementing them in the
+                  optimizer. Rather, we can optimize programs by hand and
+                  compare optimized and unoptimized code to develop sound data
+                  to use when deciding whether to implement an
+                  optimization. While the approach is similar to
+                  source-to-source optimizers, which are by no means a new
+                  idea, in our case the target language is an extension of the
+                  source language, and one specifically designed to be easier
+                  to compile well. We are applying the approach in our ongoing
+                  implementation of Persistent Modula-3. We present the type
+                  annotation approach in the context of Modula-3, but it
+                  should be applicable to any strongly typed persistent
+                  programming language, as well as to a range of other kinds
+                  of optimizations.  }
+}
+
+@InProceedings{Hosking+1993SOSP,
+  author =       {Antony L. Hosking and J. Eliot B. Moss},
+  title =        {Protection Traps and Alternatives for Memory Management of
+                  an Object-Oriented Language},
+  booktitle =    {ACM Symposium on Operating Systems Principles},
+  year =         1993,
+  pages =        {106--119},
+  month =        dec,
+  address =      {Asheville, North Carolina},
+  doi =          {10.1145/168619.168628},
+  abstract =     {Many operating systems allow user programs to specify the
+                  protection level (inaccessible, read-only, read-write) of
+                  pages in their virtual memory address space, and to handle
+                  any protection violations that may occur. Such
+                  page-protection techniques have been exploited by several
+                  user-level algorithms for applications including
+                  generational garbage collection and persistent
+                  stores. Unfortunately, modern hardware has made efficient
+                  handling of page protection faults more difficult. Moreover,
+                  page-sized granularity may not match the natural granularity
+                  of a given application. In light of these problems, we
+                  reevaluate the usefulness of page-protection primitives in
+                  such applications, by comparing the performance of
+                  implementations that make use of the primitives with others
+                  that do not. Our results show that for certain applications
+                  software solutions outperform solutions that rely on
+                  page-protection or other related virtual memory primitives.}
+}
+
+@InProceedings{Hosking+1993OOPSLA,
+  author =       {Antony L. Hosking and J. Eliot B. Moss},
+  title =        {Object Fault Handling for Persistent Programming Languages:
+                  A Performance Evaluation},
+  booktitle =    {ACM SIGPLAN Conference on Object-Oriented Programming,
+                  Systems, Languages, and Applications},
+  year =         1993,
+  pages =        {288--303},
+  month =        sep,
+  address =      {Washington, DC},
+  doi =          {10.1145/165854.165907},
+  abstract =     {A key mechanism of a persistent programming language is its
+                  ability to detect and handle references to non-resident
+                  objects. Ideally, this mechanism should be hidden from the
+                  programmer, allowing the transparent manipulation of all
+                  data regardless of its potential lifetime. We term such a
+                  mechanism <em>object faulting</em>, in a deliberate analogy
+                  with page faulting in virtual memory systems. This paper
+                  presents a number of mechanisms for detecting and handling
+                  references to persistent objects, and evaluates their
+                  relative performance within an implementation of Persistent
+                  Smalltalk.}
+}
+
+@InProceedings{Hosking+1993VLDB,
+  author =       {Antony L. Hosking and Eric Brown and J. Eliot B. Moss},
+  title =        {Update Logging for Persistent Programming Languages: A
+                  Comparative Performance Evaluation},
+  booktitle =    {International Conference on Very Large Data Bases},
+  year =         1993,
+  pages =        {429--440},
+  month =        aug,
+  address =      {Dublin, Ireland},
+  url =          {http://www.vldb.org/conf/1993/P429.PDF},
+  abstract =     {If persistent programming languages are to be accepted they
+                  must provide many of the standard features of traditional
+                  database systems, including resilience in the face of system
+                  failures in which the volatile database (in-memory database
+                  buffers) is lost. Ensuring the consistency of the database
+                  requires the generation of recovery information sufficient
+                  to restore the database to a consistent state after a
+                  crash. This paper examines a range of schemes for the
+                  efficient generation of recovery information in persistent
+                  programming languages, and evaluates their relative
+                  performance within an implementation of Persistent
+                  Smalltalk.}
+}
+
+@InProceedings{Hosking+1992OOPSLA,
+  author =       {Antony L. Hosking and J. Eliot B. Moss and Darko
+                  Stefanovi{\'c}},
+  title =        {A Comparative Performance Evaluation of Write Barrier
+                  Implementations},
+  booktitle =    {ACM SIGPLAN Conference on Object-Oriented Programming,
+                  Systems, Languages, and Applications},
+  year =         1992,
+  pages =        {92--109},
+  month =        oct,
+  address =      {Vancouver, Canada},
+  doi =          {10.1145/141936.141946},
+  abstract =     {Generational garbage collectors are able to achieve very
+                  small pause times by concentrating on the youngest (most
+                  recently allocated) objects when collecting, since objects
+                  have been observed to die young in many
+                  systems. Generational collectors must keep track of all
+                  pointers from older to younger generations, by “monitoring”
+                  all stores into the heap. This <em>write barrier</em> has
+                  been implemented in a number of ways, varying essentially in
+                  the granularity of the information observed and stored. Here
+                  we examine a range of write barrier implementations and
+                  evaluate their relative performance within a generation
+                  scavenging garbage collector for Smalltalk.}
+}
+
+@InProceedings{Hosking+1990POS,
+  author =       {Antony L. Hosking and J. Eliot B. Moss},
+  title =        {Towards Compile-Time Optimisations for Persistence},
+  booktitle =    {International Workshop on Persistent Object Systems},
+  year =         1990,
+  editor =       {Alan Dearle and Gail Shaw and Stan Zdonik},
+  pages =        {17--27},
+  month =        sep,
+  address =      {Martha's Vineyard, Massachusetts},
+  publisher =    {Morgan Kaufmann},
+  abstract =     {We consider how a persistent programming language might
+                  offer performance competitive with that of non-persistent
+                  languages, at least on memory resident data. We are
+                  concerned with object-oriented languages, and with
+                  implementing persistence via <em>object faulting</em>, where
+                  the system detects uses of non-resident objects and fetches
+                  them on demand. We present some background on object
+                  faulting and means for implementing it, and describe a
+                  specific language we are developing, namely Persistent
+                  Modula-3. Then we explore approaches to optimising
+                  persistence aspects of Persistent Modula-3, and outline
+                  techniques under consideration in our compiler development
+                  effort.}
+}
+
+@Article{Hosking2001POS,
+  author =       {Antony L. Hosking},
+  title =        {2000 International Workshop on Persistent Object Systems,
+                  Session 4: Overview},
+  journal =      {Lecture Notes in Computer Science},
+  year =         2001,
+  volume =       2135,
+  pages =        {157--160},
+  publisher =    {Springer},
+  doi =          {10.1007/3-540-45498-5_13}
+}
+
+@Article{Hosking+2000SPE,
+  editor =       {Antony L. Hosking and Quintin Cutts},
+  title =        {Special Issue on Persistent Object Systems},
+  journal =      {Software --- Practice and Experience},
+  year =         2000,
+  volume =       30,
+  number =       4,
+  pages =        {293--294},
+  month =        apr,
+  doi =
+                  {10.1002/(SICI)1097-024X(20000410)30:4<293::AID-SPE300>3.0.CO;2-Y}
+}
+
+@Proceedings{Hosking+2013DLS,
+  title =        {Symposium on Dynamic Languages},
+  year =         2013,
+  editor =       {Antony L. Hosking and Patrick Eugster and Carl-Friedrich
+                  Bolz},
+  series =       {DLS},
+  address =      {Indianapolis, Indiana},
+  month =        oct,
+  publisher =    {ACM},
+  doi =          {10.1145/2508168}
+}
+
+@Proceedings{Hosking+2013OOPSLA,
+  title =        {ACM SIGPLAN International Conference on Object-Oriented
+                  Programming, Systems, Languages, and Applications},
+  year =         2013,
+  editor =       {Antony L. Hosking and Patrick Eugster and Cristina C. Lopes},
+  address =      {Indianapolis, Indiana},
+  month =        oct,
+  publisher =    {ACM},
+  doi =          {10.1145/2509136}
+}
+
+@Proceedings{Hosking+2013SPLASH,
+  title =        {ACM Conference Conference on Systems, Programming,
+                  Languages, and Applications: Software for Humanity},
+  year =         2013,
+  editor =       {Antony L. Hosking and Patrick Eugster},
+  address =      {Indianapolis, Indiana},
+  month =        oct,
+  publisher =    {ACM},
+  doi =          {10.1145/2508075}
+}
+
+@Proceedings{Hosking+2013Onward,
+  title =        {ACM Symposium on New Ideas in Programming and Reflections on
+                  Software: Onward!},
+  year =         2013,
+  editor =       {Antony L. Hosking and Patrick Eugster and Robert Hirschfeld},
+  address =      {Indianapolis, Indiana},
+  month =        oct,
+  publisher =    {ACM},
+  doi =          {10.1145/2509578}
+}
+
+@Proceedings{Hosking+2009VEE,
+  title =        {ACM SIGPLAN International Conference on Virtual Execution
+                  Environments},
+  year =         2009,
+  editor =       {Antony L. Hosking and David F. Bacon and Orran Krieger},
+  address =      {Washington, DC},
+  month =        mar,
+  doi =          {10.1145/1508293}
+}
+
+@Proceedings{Hosking+MSPC,
+  title =        {ACM SIGPLAN Workshop on Memory System Performance and
+                  Correctness},
+  year =         2006,
+  editor =       {Antony L. Hosking and Ali-Reza Adl-Tabatabai},
+  address =      {San Jose, California},
+  month =        2006,
+  publisher =    {ACM},
+  doi =          {10.1145/1178597}
+}
+
+@Proceedings{Chambers+2000ISMM,
+  title =        {ACM SIGPLAN International Symposium on Memory Management},
+  year =         2000,
+  editor =       {Craig Chambers and Antony L. Hosking},
+  address =      {Minneapolis, Minnesota},
+  month =        oct,
+  doi =          {10.1145/362422}
+}
+
+@InProceedings{Hosking+1999IWAOOS,
+  author =       {Antony L. Hosking and Nathaniel Nystrom and David Whitlock
+                  and Quintin Cutts and Amer Diwan},
+  title =        {Partial Redundancy Elimination for Access Path Expressions},
+  booktitle =    {ECOOP Workshop on Aliasing in Object Oriented Systems},
+  year =         1999,
+  editor =       {James Noble and Jan Vitek and Doug Lea and Paulo Sergio
+                  Almeida},
+  month =        jun,
+  address =      {Lisbon, Portugal},
+  doi =          {10.1007/3-540-46589-8_8},
+  abstract =     {Pointer traversals pose significant overhead to the
+                  execution of object-oriented programs, since every access to
+                  an object’s state requires a pointer
+                  dereference. Eliminating redundant pointer traversals
+                  reduces both instructions executed as well as redundant
+                  memory accesses to relieve pressure on the memory
+                  subsystem. We describe an approach to elimination of
+                  redundant access expressions that combines partial
+                  redundancy elimination (PRE) with type-based alias analysis
+                  (TBAA). To explore the potential of this approach we have
+                  implemented an optimization framework for Java class files
+                  incorporating TBAA-based PRE over pointer <em>access
+                  expressions</em>. The framework is implemented as a
+                  classfile-to-classfile transformer; optimized classes can
+                  then be run in any standard Java execution environment. Our
+                  experiments demonstrate improvements in the execution of
+                  optimized code for several Java benchmarks running in
+                  diverse execution environments: the standard interpreted JDK
+                  virtual machine, a virtual machine using “just-in-time”
+                  compilation, and native binaries compiled off-line
+                  (“way-ahead-of-time”). We isolate the impact of access path
+                  PRE using TBAA, and demonstrate that Java’s requirement of
+                  precise exceptions can noticeably impact code-motion
+                  optimizations like PRE.}
+}
+
+@InProceedings{Hosking+1997GC,
+  author =       {Antony L. Hosking and Aria P. Novianto},
+  title =        {Reachability-Based Orthogonal Persistence for C, C++, and
+                  Othr Intransigents},
+  booktitle =    {OOPSLA Workshop on Garbage Collection and Memory Management},
+  year =         1997,
+  month =        oct,
+  address =      {Atlanta, Georgia},
+  abstract =     {We describe how reachability-based orthogonal persistence
+                  can be supported even in uncooperative implementations of
+                  languages such as C and C++, where there is no support for
+                  accurate discovery of transient roots. Such ambiguous
+                  transient roots preclude the usual copying approach to
+                  promotion of objects from transient to persistent by
+                  reachability from well-known persistent roots [Atkinson et
+                  al. 1983]. Our approach extends Bartlett’s mostly-copying
+                  garbage collector [Bartlett 1988; 1989] to manage both
+                  transient objects and resident persistent objects, and to
+                  perform the reachability closure necessary for stabilization
+                  in a mostly-copying fashion. The only requirement, necessary
+                  anyway for persistence, is accurate discovery of pointers in
+                  heap-allocated objects. Such support can be obtained through
+                  direct compiler assistance, extracted from debugging
+                  information, or provided explicitly by the programmer. We
+                  also consider how the garbage collector can inform the
+                  buffer manager of persistent pages that are likely
+                  candidates for removal.}
+}
+
+@InProceedings{Hosking+1997IDEA,
+  author =       {Antony L. Hosking and Quintin Cutts},
+  title =        {Analysing, Profiling and Optimising for Persistence},
+  booktitle =    {Australian Workshop on Integrated Data Environments},
+  year =         1997,
+  month =        may,
+  address =      {Magnetic Island, Queensland, Australia},
+  url =          {http://www.cs.adelaide.edu.au/users/idea/idea4},
+  abstract =     {“Unfortunately, little research has been reported on
+                  optimizing database programming languages. Traditional
+                  programming-language optimization techniques should be
+                  applicable in many cases, but no research has been reported
+                  ... This is an important and difficult area for future
+                  research, because it spans programming language and database
+                  systems disciplines.” [Cattell 1994], p. 185.}
+}
+
+@InProceedings{Hosking1995ODB,
+  author =       {Antony L. Hosking},
+  title =        {Benchmarking Persistent Programming Languages: Quantifying
+                  the Language/Database Interface},
+  booktitle =    {OOPSLA Workshop on Object Database Behavior, Benchmarks, and
+                  Performance},
+  year =         1995,
+  editor =       {Ben Zorn and Akmal B. Chaudri},
+  month =        oct,
+  address =      {Austin, Texas},
+  doi =          {10.1145/260111.260272}
+}
+
+@InProceedings{Hosking+1993GC,
+  author =       {Antony L. Hosking and Richard S. Hudson},
+  title =        {Remembered Sets Can Also Play Cards},
+  booktitle =    {OOPSLA Workshop on Garbage Collection and Memory Management},
+  year =         1993,
+  editor =       {Paul Wilson},
+  month =        sep,
+  address =      {Washington, DC},
+  url =          {ftp://ftp.cs.utexas.edu/pub/garbage/GC93/hosking.ps},
+  abstract =     {Remembered sets and dirty bits have been proposed as
+                  alternative implementations of the write barrier for garbage
+                  collection. There are advantages to both approaches. Dirty
+                  bits can be efficiently maintained with minimal, bounded
+                  overhead per store operation, while remembered sets
+                  concisely, and accurately record the necessary
+                  information. Here we present evidence to show that hybrids
+                  can combine the virtues of both schemes and offer
+                  competitive performance. Moreover, we argue that a hybrid
+                  can better avoid the devils that are the downfall of the
+                  separate alternatives.}
+}
+
+@InProceedings{Hosking1991GC,
+  author =       {Antony L. Hosking},
+  title =        {Main Memory Management for Persistence},
+  booktitle =    {OOPSLA Workshop on Garbage Collection and Memory Management},
+  year =         1991,
+  editor =       {Paul R. Wilson and Barry Hayes},
+  month =        oct,
+  address =      {Phoenix, Arizona},
+  doi =          {10.1145/143776.143792},
+  abstract =     {Reachability-based persistence imposes new requirements for
+                  main memory management in general, and garbage collection in
+                  particular. After a brief introduction to the
+                  characteristics and requirements of reachability-based
+                  persistence, we present the design of a run-time storage
+                  manager for Persistent Smalltalk and Persistent Modula-3,
+                  which allows the reclamation of storage from both temporary
+                  objects and buffered persistent objects.}
+}
+
+@TechReport{Blackburn+2006TR,
+  author =       {Stephen M. Blackburn and Robin Garner and Chris Hoffmann and
+                  Asjad M. Khan and Kathryn S. McKinley and R. Bentzur and
+                  Amer Diwan and Daniel Feinberg and Daniel Frampton and
+                  Samuel Z. Guyer and Martin Hirzel and Antony L. Hosking and
+                  Maria Jump and Han Lee and J. Eliot B. Moss and Aashish
+                  Phansalkar and Darko Stefanovi{\'c} and Thomas VanDrunen and
+                  Daniel von Dincklage and Ben Wiedermann},
+  title =        {The DaCapo benchmarks: Java benchmarking development and
+                  analysis (extended version)},
+  institution =  {Australian National University},
+  year =         2006,
+  type =         {Technical Report},
+  number =       {TR-CS-06-01},
+  url =          {http://dacapobench.org},
+  abstract =     {Since benchmarks drive computer science research and
+                  industry product development, which ones we use and how we
+                  evaluate them are key questions for the community. Despite
+                  complex run-time tradeoffs due to dynamic compilation and
+                  garbage collection required for Java programs, many
+                  evaluations still use methodologies developed for C, C++,
+                  and Fortran. SPEC, the dominant purveyor of benchmarks,
+                  compounded this problem by institutionalizing these
+                  methodologies for their Java benchmark suite. This paper
+                  recommends benchmarking selection and evaluation
+                  methodologies, and introduces the DaCapo benchmarks, a set
+                  of open source, client-side Java benchmarks. We demonstrate
+                  that the complex interactions of (1) architecture, (2)
+                  compiler, (3) virtual machine, (4) memory management, and
+                  (5) application require more extensive evaluation than C,
+                  C++, and Fortran which stress (4) much less, and do not
+                  require (3). We use and introduce new value, time-series,
+                  and statistical metrics for static and dynamic properties
+                  such as code complexity, code size, heap composition, and
+                  pointer mutations. No benchmark suite is definitive, but
+                  these metrics show that DaCapo improves over SPEC Java in a
+                  variety of ways, including more complex code, richer object
+                  behaviors, and more demanding memory system
+                  requirements. This paper takes a step towards improving
+                  methodologies for choosing and evaluating benchmarks to
+                  foster innovation in system design and implementation for
+                  Java and other managed languages.}
+}
+
+@TechReport{VanDrunen+2003TR,
+  author =       {Thomas VanDrunen and Antony L. Hosking},
+  title =        {Corner Cases in Value-Based Partial Redundancy Elimination},
+  institution =  {Purdue University},
+  year =         2003,
+  type =         {Department of Computer Science Technical Report},
+  number =       {03-032},
+  month =        oct,
+  url =          {http://docs.lib.purdue.edu/cstech/1581}
+}
+
+@TechReport{Flack+2003TR,
+  author =       {Chapman Flack and Antony L. Hosking and Jan Vitek},
+  title =        {Idioms in Ovm},
+  institution =  {Purdue University},
+  year =         2003,
+  type =         {Department of Computer Science Technical Report},
+  number =       {03-017},
+  month =        may,
+  url =          {http://docs.lib.purdue.edu/cstech/1566},
+  abstract =     {The need to express important non-Java behaviors confronts
+                  the Ovm virtual machine framework no less than anyother
+                  VM-in-Java project such as JikesRVM. Any suchnproject needs
+                  mechanisms for the purpose, but different choices in the VM
+                  design affect the shape those mechanisms can take.  In
+                  exploring how a component that makes non-trivial use of such
+                  mechanisms --- the JMTk memory management toolkit --- can be
+                  made to interoperate with Ovm and JikesRVM, some Ovm
+                  mechanisms have been both contributed to and borrowed from
+                  JikesRVM, and some remain distinct.  We describe mechanisms
+                  we find useful in Ovm because of its design differences from
+                  JikesRVM.<p> We have developed idioms that use familiar Java
+                  syntax at the source level, and familiar, recognizable
+                  design patterns for problems such as VM configurability that
+                  involve <em>ad hoc</em> techniques in prior work, and we
+                  transform the idioms to code without the indirection and
+                  inefficiency that would otherwise weigh against the familiar
+                  patterns.}
+}
+
+@TechReport{Hosking+1998TR,
+  author =       {Antony L. Hosking and Nathaniel Nystrom and David Whitlock
+                  and Quintin Cutts and Amer Diwan},
+  title =        {Partial Redundancy Elimination for Access Path Expressions},
+  institution =  {Purdue University},
+  year =         1998,
+  type =         {Department of Computer Science Technical Report},
+  number =       {98-044},
+  month =        nov,
+  url =          {http://docs.lib.purdue.edu/cstech/1431},
+  abstract =     {Pointer traversals pose significant overhead to the
+                  execution of object-oriented programs, since every access to
+                  an object’s state requires a pointer
+                  dereference. Eliminating redundant pointer traversals
+                  reduces both instructions executed as well as redundant
+                  memory accesses to relieve pressure on the memory
+                  subsystem. We describe an approach to elimination of
+                  redundant access expressions that combines partial
+                  redundancy elimination (PRE) with type-based alias analysis
+                  (TBAA). To explore the potential of this approach we have
+                  implemented an optimization framework for Java class files
+                  incorporating TBAA-based PRE over pointer access
+                  expressions. The framework is implemented as a
+                  classfile-to-classfile transformer; optimized classes can
+                  then be run in any standard Java execution environment. Our
+                  experiments demonstrate improvements in the execution of
+                  optimized code for several Java benchmarks running in
+                  diverse execution environments: the standard interpreted JDK
+                  virtual machine, a virtual machine using “just-in-time”
+                  compilation, and native binaries compiled off-line
+                  (“way-ahead-of-time”). We isolate the impact of access path
+                  PRE using TBAA, and demonstrate that Java’s requirement of
+                  precise exceptions can noticeably impact code-motion
+                  optimizations like PRE.}
+}
+
+@TechReport{Hosking1996TR,
+  author =       {Antony L. Hosking},
+  title =        {Residency Check Elimination for Object-Oriented Persistent
+                  Languages},
+  institution =  {Purdue University},
+  year =         1996,
+  type =         {Department of Computer Science Technical Report},
+  number =       {96-053},
+  month =        sep,
+  url =          {http://docs.lib.purdue.edu/cstech/1307},
+  abstract =     {We explore the ramifications of object residency assumptions
+                  and their impact on residency checking for several
+                  subroutine dispatch scenarios: procedural, static
+                  object-oriented, and dynamic (virtual) object-oriented. We
+                  obtain dynamic counts of the residency checks necessary for
+                  execution of several benchmark persistent programs under
+                  each of these scenarios. The results reveal that significant
+                  reductions in the number of residency checks can be achieved
+                  through application of residency rules derived from the
+                  dispatch scenario under which a program executes, as well as
+                  additional constraints specific to the language in which it
+                  is implemented.}
+}
+
+@TechReport{Hosking+1995TR,
+  author =       {Antony L. Hosking and J. Eliot B. Moss},
+  title =        {Lightweight Write Detection and Checkpointing for
+                  Fine-Grained Persistence},
+  institution =  {Purdue University},
+  year =         1995,
+  type =         {Department of Computer Science Technical Report},
+  number =       {95-084},
+  month =        dec,
+  url =          {http://docs.lib.purdue.edu/cstech/1256},
+  abstract =     {Many systems must dynamically track writes to cached data,
+                  for the purpose of reconciling those updates with respect to
+                  the permanent or global state of the data.  For example,
+                  distributed systems employ coherency protocols to ensure a
+                  consistent view of shared data.  Similarly, database systems
+                  log updates both for concurrency control and to ensure the
+                  resilience of those updates in the face of system failures.
+                  Here, we measure and compare the absolute performance of
+                  several alternative mechanisms for the lightweight detection
+                  of writes to cached data in a <em>persistent</em> system,
+                  and the relative overhead to log those writes to stable
+                  storage in the form of a <em>checkpoint</em>.  A checkpoint
+                  defines a consistent state to which the system will be
+                  restored in the event of any subsequent failure.  The
+                  efficient detection and logging of updates is critical to
+                  the performance of persistent systems that embody a
+                  fine-grained data model, since per-object overheads are
+                  typically very low.  Our results reveal a wide range of
+                  performance for the alternatives, indicating that the right
+                  choice of mechanism is important.  They also demonstrate
+                  that software write detection mechanisms can significantly
+                  outperform approaches that rely solely on the hardware and
+                  operating system.}
+}
+
+@PhDThesis{Hosking1995PhD,
+  author =       {Antony Lloyd Hosking},
+  title =        {Lightweight Support for Fine-Grained Persistence on Stock
+                  Hardware},
+  number =       {UM-CS-1995-002},
+  type =         {PhD dissertation},
+  school =       {University of Massachusetts at Amherst},
+  year =         1995,
+  month =        feb,
+  abstract =     {Persistent programming languages combine the features of
+                  database systems and programming languages to allow the
+                  seamless manipulation of both short- and long-term data,
+                  thus relieving programmers of the burden of distinguishing
+                  between data that is transient (temporarily allocated in
+                  main memory) or persistent (residing permanently on
+                  disk). Secondary storage concerns, including the
+                  representation and management of persistent data, are
+                  directly handled by the programming language implementation,
+                  rather than the programmer. Moreover, unlike traditional
+                  database systems, persistent programming languages extend to
+                  persistent data all the data structuring features supported
+                  by the language, not just those imposed by the underlying
+                  database system.<p> Prototype persistent languages have
+                  until now focused more on functionality than performance. In
+                  contrast, this dissertation addresses performance issues in
+                  the language implementation. It presents an architecture and
+                  framework for persistence which allows programming language
+                  implementation techniques to be brought to bear on the
+                  problem of performance. Building on this framework, a
+                  prototype persistent programming language is implemented,
+                  and submitted to performance evaluation to obtain direct
+                  comparisons of the performance of several implementation
+                  alternatives for different aspects of persistence. The
+                  results of these performance evaluations, which use
+                  established benchmarks, indicate that persistence can be
+                  implemented on general-purpose machines without imposing
+                  significant overhead above and beyond the fundamental costs
+                  of data transfer to and from secondary storage. Moreover,
+                  the results show that software-mediated implementation
+                  techniques can be a competitive alternative to techniques
+                  that rely on low-level support from the operating system and
+                  hardware.}
+}
+
+@Manual{Moss+1994Mneme,
+  title =        {Mneme V3.x User's Guide},
+  author =       {J. Eliot B. Moss and Antony L. Hosking and Eric Brown},
+  organization = {University of Massachusetts at Amherst},
+  edition =      {OSL+SAA Memo 1994-01-V1},
+  month =        may,
+  year =         1994
+}
+
+@Manual{Moss+1992Mneme,
+  title =        {Managing Persistent Data with Mneme: User's Guide to the
+                  Client Interface},
+  author =       {J. Eliot B. Moss and Antony L. Hosking and Eric Brown},
+  organization = {University of Massachusetts at Amherst},
+  month =        feb,
+  year =         1992,
+  abstract =     {We present the client interface of the prototype Mneme
+                  persistent object store. Mneme stores <em>objects</em>,
+                  preserving their identity and structural relationships.  Its
+                  goals include portability, low overhead and extensibility.
+                  This document is intended to be an introduction to Mneme fir
+                  applications programmers.  We discuss the basic concepts of
+                  Mneme and the interface from the programmer's point of view.
+                  An example application program is given in the appendix.}
+}
+
+@TechReport{Hosking+1991TR,
+  author =       {Antony L. Hosking and J. Eliot B. Moss},
+  title =        {Compiler Support for Persistent Programming},
+  institution =  {University of Massachusetts at Amherst},
+  year =         1991,
+  type =         {Technical Report},
+  number =       {UM-CS-1991-025},
+  month =        mar,
+  url =
+                  {https://web.cs.umass.edu/publication/docs/1991/UM-CS-1991-025.pdf},
+  abstract =     {We present the design and implementation of Persistent
+                  Modula-3, a compiled, optimized, persistent programming
+                  language. The design allows the evaluation of performance
+                  aspects of persistent programming languages, while the
+                  implementation supports the development of compile-time
+                  mechanisms for <em>optimizing</em> persistent programs. We
+                  present several optimizations in detail, and outline further
+                  optimization opportunities.}
+}
+
+@TechReport{Hosking+1990TR,
+  author =       {Antony L. Hosking and J. Eliot B. Moss and Cynthia Bliss},
+  title =        {Design of an Object Faulting Persistent Smalltalk},
+  institution =  {University of Massachusetts at Amherst},
+  year =         1990,
+  type =         {Technical Report},
+  number =       {UM-CS-1990-045},
+  month =        may,
+  url =
+                  {https://web.cs.umass.edu/publication/docs/1990/UM-CS-1990-045.pdf},
+  abstract =     {We present an approach to supporting persistence in
+                  heap-based programming languages, called object faulting. By
+                  modifying the language run-time system, we provide the
+                  illusion of a large heap of objects, only some of which are
+                  actually resident in memory. When the run-time system
+                  detects a reference to the contents of a non-resident
+                  object, an object fault occurs, causing the object to be
+                  made resident. We discuss an implementation of these
+                  techniques for Smalltalk that uses the Mneme persistent
+                  object store as the underlying storage manager.}
+}
+
+@PhdThesis{McGachey2010PhD,
+  author =       {Philip McGachey},
+  title =        {Transparent Distribution for Java Applications},
+  school =       {Purdue University},
+  year =         2006,
+  type =         {PhD dissertation},
+  month =        may,
+  abstract =     {Cloud computing and falling hardware prices today offer
+                  unprecedented access to cheap and flexible computer
+                  clusters. Unfortunately, developing the distributed
+                  applications that are needed to take full advantage of this
+                  extra capacity is still a daunting task. Application
+                  programmers must concern themselves not only with
+                  application logic, but also with the mechanics of
+                  distribution: tracking remote data, global synchronization,
+                  network configuration and so forth.<p> RuggedJ is a
+                  transparent Java distribution framework that relieves much
+                  of the burden from distributed programming. We inject
+                  distribution logic into standard Java applications, and we
+                  deploy the rewritten code across a dynamic run-time
+                  infrastructure. This way, we maintain the semantics of the
+                  original application while providing powerful distribution
+                  capabilities such as dynamic application partitioning,
+                  object location transparency and replication of immutable
+                  state.<p> This dissertation describes the design and
+                  implementation of our prototype RuggedJ transparent
+                  distribution infrastructure. It discusses both the bytecode
+                  rewriting techniques that allow us to distribute code and
+                  the run-time infrastructure that manages the distributed
+                  application. We investigate the properties of distributable
+                  applications (those that benefit from distribution), and
+                  describe techniques to optimize performance for the RuggedJ
+                  platform. Finally, we demonstrate that the system can
+                  distribute several realistic applications, and show that
+                  these applications exhibit scalability when running on a
+                  cluster beyond that possible on a single machine.}
+}
+
+@MastersThesis{McGachey2005MS,
+  author =       {Philip McGachey},
+  title =        {An Improved Generational Copying Garbage Collector},
+  school =       {Purdue University},
+  year =         2006,
+  month =        dec,
+  abstract =     {Garbage collection frees the programmer from the
+                  responsibility of tracking dynamically allocated memory. As
+                  an increasingly popular element of modern programming
+                  languages, it is essential that garbage collection be
+                  performed efficiently. This thesis investigates a new method
+                  by which garbage collection can be performed.<p> The
+                  algorithm described combines a standard generational copying
+                  collector with a mark and compact collector. The result is a
+                  generational copying collector that operates with a smaller
+                  copying reserve overhead than traditional Appel-style
+                  collectors, while maintaining correctness in the worst
+                  case. When sufficient objects survive a collection, a
+                  compacting collection ensures that all data are
+                  accommodated.<p> We have implemented this new algorithm
+                  within the framework of Jikes RVM and MMTk. For most
+                  benchmarks examined, our experiments show that performance
+                  is comparable or better to a standard generational copying
+                  collector.}
+}
+
+@PhdThesis{Welc2006PhD,
+  author =       {Adam Welc},
+  title =        {Concurrency Abstractions for Programming Languages Using
+                  Optimistic Protocols},
+  school =       {Purdue University},
+  year =         2006,
+  type =         {PhD dissertation},
+  month =        may,
+  abstract =     {Concurrency control in modern programming languages is
+                  typically managed using mechanisms based on mutual
+                  exclusion, such as mutexes or monitors. All such mechanisms
+                  share similar properties that make construction of scalable
+                  and robust applications a non-trivial task. Implementation
+                  of user-defined protocols synchronizing concurrent shared
+                  data accesses requires programmers to make careful use of
+                  mutual-exclusion locks in order to avoid safety-related
+                  problems, such as deadlock or priority inversion. On the
+                  other hand, providing a required level of safety may lead to
+                  oversynchronization and, as a result, negatively affect the
+                  level of achievable concurrency.<p> Transactions are a
+                  concurrency control mechanism developed in the context of
+                  database systems. Transactions offer a higher level of
+                  abstraction than mutual exclusion which simplifies
+                  implementation of synchronization protocols. Additionally,
+                  in order to increase concurrency, transactions relax
+                  restrictions on the interleavings allowed between concurrent
+                  data access operations, without compromising safety.<p> This
+                  dissertation presents a new approach to managing concurrency
+                  in programming languages, drawing its inspiration from
+                  optimistic transactions. This alternative way of looking at
+                  concurrency management issues is an attempt to improve the
+                  current state-of-the-art both in terms of performance and
+                  with respect to software engineering benefits.<p> Three
+                  different approaches are presented here: revocable monitors
+                  are an attempt to improve traditional mutual exclusion, safe
+                  futures propose a new way of thinking about concurrency in a
+                  context of imperative programming languages and, finally,
+                  transactional x monitors try to reconcile transactions and
+                  mutual exclusion within a single concurrency abstraction.}
+}
+
+@PhdThesis{VanDrunen2004PhD,
+  author =       {Thomas John VanDrunen},
+  title =        {Partial Redundancy Elimination for Global Value Numbering},
+  school =       {Purdue University},
+  year =         2004,
+  type =         {PhD dissertation},
+  month =        aug,
+  abstract =     {Partial redundancy elimination (PRE) is a program
+                  transformation that removes operations that are redundant on
+                  some execution paths, but not all. Such a transformation
+                  requires the partially redundant operation to be hoisted to
+                  earlier program points where the operation’s value was not
+                  previously available. Most well-known PRE techniques look at
+                  the lexical similarities between operations.<p> Global value
+                  numbering (GVN) is a program analysis that categorizes
+                  expressions in the program that compute the same static
+                  value. This information can be used to remove redundant
+                  computations. However, most widely-implemented GVN analyses
+                  and related transformations remove only computations that
+                  are fully redundant.<p> This dissertation presents new
+                  algorithms to remove partially redundant computations in a
+                  value-based view of the program. This makes a hybrid of PRE
+                  and GVN. The algorithms should be simple and practical
+                  enough to be implemented easily as optimization phases in a
+                  compiler. As far as possible, they should also to show true
+                  performance improvements on realistic benchmarks.<p> The
+                  three algorithms presented here are: ASSAPRE, a PRE
+                  algorithm for programs in a form useful for GVN; GVNPRE, the
+                  hybrid algorithm for value-based PRE; and LEPRE, an
+                  approximate PRE technique for object and array loads.}
+}
+
+@MastersThesis{Mueller2004MS,
+  author =       {Frank Mueller},
+  title =        {Penumbra: Enhancing Eclipse for Introductory Programming},
+  school =       {Purdue University},
+  year =         2004,
+  month =        may,
+  abstract =     {In recent years, Java has become the most popular
+                  programming language for introductory programming courses;
+                  however, there has been a lack of a good Java development
+                  environment for novice computer science students. We decided
+                  to adapt Eclipse for teaching purposes by developing a
+                  plug-in called Penumbra. Through our experience teaching
+                  with standard Eclipse, as well as research on alternative
+                  environments, we determined that the goals of the plug-in
+                  should be simplicity, process integration, focus on Java
+                  concepts, easy transition to professional Eclipse, as well
+                  as specialized help documentation. Penumbra has been used by
+                  approximately 350 students in the introductory computer
+                  science course at Purdue University for the last two
+                  semesters with great success. Eclipse has proved to be an
+                  excellent platform for a teaching environment, and we will
+                  continue to develop Penumbra to expand and improve
+                  features.}
+}
+
+@MastersThesis{Whitlock2000MS,
+  author =       {David Michael Whitlock},
+  title =        {Persistence-Enabled Optimization of Java Programs},
+  school =       {Purdue University},
+  year =         2000,
+  month =        may,
+  abstract =     {Programs contained within a persistent store provide a
+                  unique opportunity for whole-program analysis and
+                  optimization. In particular, several constraints on
+                  optimization can be relaxed in a persistent setting,
+                  allowing aggressive off-line optimizations to be
+                  performed. This work explores interprocedural optimizations
+                  of Java programs residing within a persistent store. Call
+                  site customization and method inlining are safely performed
+                  on Java methods without the need to adjust methods while
+                  they execute. A feedback mechanism between the Java virtual
+                  machine and the optimizer allows new classes to be added to
+                  the system while maintaining correctly optimized code. Our
+                  results show a significant decrease in the number of method
+                  invocations and a noticeable increase in performance in
+                  certain execution environments.}
+}
+
+@MastersThesis{Nystrom1998MS,
+  author =       {Nathaniel John Nystrom},
+  title =        {Bytecode-Level Analysis and Optimization of Java Classes},
+  school =       {Purdue University},
+  year =         1998,
+  month =        aug,
+  abstract =     { The Java virtual machine specification provides the
+                  interface between Java compilers and Java execution
+                  environments. Its standard class file format is a convenient
+                  target for optimization of Java applications, even in
+                  environments where source code for both libraries and
+                  application is unavailable. Java bytecode can be optimized
+                  independently of the source-language compiler and virtual
+                  machine implementation. To explore the potential of
+                  bytecode-to-bytecode optimization frameworks, we have built
+                  a Java class file optimization tool called BLOAT and
+                  measured its impact on the performance of several benchmark
+                  programs. Our results demonstrate significant improvement in
+                  the execution of Java classes optimized by BLOAT, especially
+                  on an interpreted virtual machine, but indicate that more
+                  aggressive optimizations, particularly those enabled by
+                  interprocedural analysis will provide more benefit. We also
+                  consider execution in more performance-conscious
+                  environments such as just-in-time and off-line compilation.}
+}
+
+@MastersThesis{Brahnmath1998MS,
+  author =       {Kumar Jagadeeshwaraiah Brahnmath},
+  title =        {Optimizing Orthogonal Persistence for Java},
+  school =       {Purdue University},
+  year =         1998,
+  month =        may,
+  abstract =     { Persistent programming languages provide object persistence
+                  across program invocations, by treating volatile memory as a
+                  cache for stable storage. Orthogonal persistence allows any
+                  object to be potentially persistent, without any restriction
+                  on its type. Adding orthogonal persistence to a language
+                  environment presents several performance-related
+                  challenges. This work is aimed at reducing the various
+                  overheads associated with orthogonal persistence. The costs
+                  being targeted are read barriers, write barriers and swizzle
+                  barriers. A read barrier checks the cache residency of the
+                  target object while a write barrier marks the target as
+                  dirty in the cache. Many of these read and write barriers
+                  are redundant, and applying partial redundancy elimination
+                  of pointer-based access path expressions can be very
+                  beneficial in eliminating them. Swizzling is the translation
+                  of an object reference from an external, persistent format
+                  to an internal, transient format; a swizzle barrier checks
+                  and makes sure that a reference is swizzled. Swizzle
+                  barriers have the added overhead that they are usually
+                  associated with iteration over container objects like
+                  arrays. Hence, there is a need for an additional
+                  optimization to merge multiple swizzle barriers into one
+                  inclusive barrier. By induction variable analysis, the
+                  bounds of a variable being used to loop through an array can
+                  be determined. We exploit this information to develop a
+                  range swizzle optimization technique to reduce the overhead
+                  of swizzle barriers. We have implemented our analysis and
+                  optimization framework for an orthogonally persistent Java
+                  system. In experiments performed on several benchmarks and
+                  applications, our optimizations eliminated on average 83
+                  percent of read barriers, 25 percent of write barriers and
+                  66 percent of swizzle barriers.}
+}
+
+@MastersThesis{Hussein2013MS,
+  author =       {Ahmed Hussein},
+  title =        {On Tracing the Memory Behavior of Dalvik Applications},
+  school =       {Purdue University},
+  year =         2013,
+  month =        dec,
+  abstract =     {The Dalvik virtual machine hosts all user applications for
+                  the Android platform. Written in the Java programming
+                  language, the performance of these applications is critical
+                  to the user experience of Android. Understanding the
+                  behavior of applications running on Dalvik is central to
+                  diagnosing application bottlenecks and also to improving the
+                  support provided by Dalvik to representative workloads. To
+                  date, no infrastructure for Dalvik has allowed understanding
+                  of application behavior in the context of the Dalvik
+                  implementation. This thesis develops and applies a memory
+                  profiling framework for measuring the platform-independent
+                  memory behavior of applications running on
+                  Dalvik. Validation of the resulting profiling framework is
+                  achieved by porting standard Java benchmarks with known
+                  memory behaviors so that they can execute on Dalvik with
+                  substantially similar profiles. The profiling framework thus
+                  allows evaluation of industry-standard Android benchmarks to
+                  be done with confidence.}
+}
+
