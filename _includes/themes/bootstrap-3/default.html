@@ -11,6 +11,8 @@
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+
     <!-- Bootstrap styles -->
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Optional theme -->
@@ -63,11 +65,21 @@
             {% assign group = 'navigation' %}
             {% include JB/pages_list %}
           </ul>
-          <form class="navbar-form navbar-right" role="search">
+          <form class="navbar-form navbar-right" role="social">
+<!--
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
+-->
+            <a class="navbar-btn fa fa-lg fa-envelope-square" href="mailto:{{ site.author.email }}"></a>
+            <a class="navbar-btn fa fa-lg fa-phone-square" href="tel:{{ site.author.phone }}"></a>
+            <a class="navbar-btn fa fa-lg fa-mobile" href="tel:{{ site.author.mobile }}"></a>
+            <a class="navbar-btn fa fa-google" href="https://scholar.google.com/citations?user={{ site.author.google }}"></a>
+            <a class="navbar-btn fa fa-lg fa-google-plus-square" href="https://plus.google.com/+{{ site.author.googleplus }}"></a>
+            <a class="navbar-btn fa fa-lg fa-linkedin-square" href="https://www.linkedin.com/in/{{ site.author.linkedin }}"></a>
+            <a class="navbar-btn fa fa-lg fa-twitter-square" href="https://twitter.com/{{ site.author.twitter }}"></a>
+            <a class="navbar-btn fa fa-lg fa-github-square" href="https://github.com/{{ site.author.github }}"></a>
           </form>
         </div><!-- /.navbar-collapse -->
       </nav>
