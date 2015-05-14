@@ -11,17 +11,19 @@
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-
     <!-- Bootstrap styles -->
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Optional theme -->
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
     <!-- Sticky Footer -->
     <link href="{{ ASSET_PATH }}/bootstrap/css/bs-sticky-footer.css" rel="stylesheet">
-    
+
     <!-- Custom styles -->
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Academic Icons -->
+    <link href="{{ ASSET_PATH }}/academicons_v1/academicons.css" rel="stylesheet">
+    <link href="{{ ASSET_PATH }}/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -55,6 +57,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <div class="col-xs-3 col-lg-3">
+            <img src="{{ BASE_PATH }}img/profile-picture.png" 
+                 class="img-circle"
+                 style="width:56px;border:2px solid rgba(255,255,255,0.75)">
+          </div>
           <a class="navbar-brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
         </div>
 
@@ -72,14 +79,15 @@
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
 -->
-            <a class="navbar-btn fa fa-lg fa-envelope-square" href="mailto:{{ site.author.email }}"></a>
-            <a class="navbar-btn fa fa-lg fa-phone-square" href="tel:{{ site.author.phone }}"></a>
-            <a class="navbar-btn fa fa-lg fa-mobile" href="tel:{{ site.author.mobile }}"></a>
-            <a class="navbar-btn fa fa-google" href="https://scholar.google.com/citations?user={{ site.author.google }}"></a>
-            <a class="navbar-btn fa fa-lg fa-google-plus-square" href="https://plus.google.com/+{{ site.author.googleplus }}"></a>
-            <a class="navbar-btn fa fa-lg fa-linkedin-square" href="https://www.linkedin.com/in/{{ site.author.linkedin }}"></a>
-            <a class="navbar-btn fa fa-lg fa-twitter-square" href="https://twitter.com/{{ site.author.twitter }}"></a>
-            <a class="navbar-btn fa fa-lg fa-github-square" href="https://github.com/{{ site.author.github }}"></a>
+            <a class="navbar-btn fa fa-2x fa-envelope-square" href="mailto:{{ site.author.email }}"></a>
+            <a class="navbar-btn fa fa-2x fa-phone-square" href="tel:{{ site.author.phone }}"></a>
+            <a class="navbar-btn fa fa-2x fa-mobile" href="tel:{{ site.author.mobile }}"></a>
+            <a class="navbar-btn ai fa-2x ai-google-scholar-square" href="https://scholar.google.com/citations?user={{ site.author.google }}"></a>
+            <a class="navbar-btn fa fa-2x fa-google-plus-square" href="https://plus.google.com/+{{ site.author.googleplus }}"></a>
+            <a class="navbar-btn fa fa-2x fa-linkedin-square" href="https://www.linkedin.com/in/{{ site.author.linkedin }}"></a>
+            <a class="navbar-btn fa fa-2x fa-twitter-square" href="https://twitter.com/{{ site.author.twitter }}"></a>
+            <a class="navbar-btn fa fa-2x fa-github-square" href="https://github.com/{{ site.author.github }}"></a>
+            <a class="navbar-btn fa fa-2x fa-bitbucket-square" href="https://bitbucket.com/{{ site.author.bitbucket }}"></a>
           </form>
         </div><!-- /.navbar-collapse -->
       </nav>
