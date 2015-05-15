@@ -5,11 +5,8 @@ header: Projects
 group: navigation
 ---
 
-The *Mu* Micro Virtual Machine
-------------------------------
+* [The *Mu* Micro Virtual Machine
+  ![MicroVM](img/macadamia.jpg)](http://microvm.org)
 
-[![MicroVM](img/macadamia.jpg)](http://microvm.org)
-
-XJ: Open and Closed Nested Transactions for Java
-------------------------------------------------
+* XJ: Open and Closed Nested Transactions for Java
 
