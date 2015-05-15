@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Service
-tagline: 
 group: navigation
 ---
 |PLDI 2016||Program Committee|
@@ -22,7 +21,7 @@ group: navigation
 |[ISMM 2013](http://www.cs.technion.ac.il/~erez/ismm13)||External Review Committee|
 |[RESoLVE 2013](http://www.cl.cam.ac.uk/research/srg/netos/resolve_2013)||Program Chair|
 |[VEE 2013](http://www.cl.cam.ac.uk/research/srg/netos/vee_2012)||Steering Committee Chair|
-|[SIGPLAN 2009--2012](http://www.sigplan.org)|| Executive Committee Member-at-Large |
+|[SIGPLAN 2009--2012](http://www.sigplan.org)||Executive Committee|
 |[PLDI 2012](http://pldi12.cs.purdue.edu)||Program Committee|
 |[ECOOP 2012](http://ecoop12.cs.purdue.edu)||General Chair|
 |[VEE 2012](http://www.cl.cam.ac.uk/research/srg/netos/vee_2012)||Steering Committee Chair|
