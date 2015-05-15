@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Service
+tagline: 
 group: navigation
 ---
-|PLDI 2016|Program Committee|
+|PLDI 2016              |Program Committee|
 |[Onward! 2015](http://2015.splashcon.org/committee/onward2015-steering-committee)|Steering Committee|
 |[SPLASH 2015](http://2015.splashcon.org)|Steering Committee|
 |[SPLASH 2015](http://2015.splashcon.org)|Sponsorship Chair|
@@ -19,8 +20,9 @@ group: navigation
 |[SPLASH 2013](http://splashcon.org/2013)|Steering Committee|
 |[SPLASH 2013](http://splashcon.org/2013)|General Chair|
 |[ISMM 2013](http://www.cs.technion.ac.il/~erez/ismm13)|External Review Committee|
-|[RESoLVE 2013](http://www.cl.cam.ac.uk/research/srg/netos/resolve_2013)|ProgramChair|
+|[RESoLVE 2013](http://www.cl.cam.ac.uk/research/srg/netos/resolve_2013)|Program Chair|
 |[VEE 2013](http://www.cl.cam.ac.uk/research/srg/netos/vee_2012)|Steering Committee Chair|
+|[SIGPLAN 2009-12](http://www.sigplan.org)| Executive Committee Member-at-Large |
 |[PLDI 2012](http://pldi12.cs.purdue.edu)|Program Committee|
 |[ECOOP 2012](http://ecoop12.cs.purdue.edu)|General Chair|
 |[VEE 2012](http://www.cl.cam.ac.uk/research/srg/netos/vee_2012)|Steering Committee Chair|
