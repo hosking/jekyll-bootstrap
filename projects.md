@@ -6,7 +6,8 @@ group: navigation
 ---
 
 * [The *Mu* Micro Virtual Machine
-  ![MicroVM](img/macadamia.jpg)](http://microvm.org)
+  ![MicroVM](img/macadamia.png)](http://microvm.org)
 
 * XJ: Open and Closed Nested Transactions for Java
 
+* Android Memory Management
