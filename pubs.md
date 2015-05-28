@@ -2,34 +2,30 @@
 layout: page
 title: Publications
 header: Publications
-tagline: Books, Articles, Papers, Proofs, Reports, Manuals, Theses
+tagline: <a href="#Books">Books</a>, <a href="#Papers">Papers</a>, <a href="#Proofs">Proofs</a>, <a href="#Reports">Reports</a>, <a href="#Manuals">Manuals</a>, <a href="#Theses">Theses</a>
 group: navigation
 ---
 
-Books
+<a name="Books"></a>Books
 -----
 {% bibliography --query @book %}
 
-Articles & Papers
+<a name="Papers"></a>Papers
 --------
-{% bibliography --query @article --query @inproceedings %}
+{% bibliography --query @article @inproceedings %}
 
-Proofs
+<a name="Proofs"></a>Proofs
 ------
 {% bibliography --query @incollection %}
 
-Reports
+<a name="Reports"></a>Reports
 -------
 {% bibliography --query @techreport %}
 
-Manuals
+<a name="Manuals"></a>Manuals
 -------
 {% bibliography --query @manual %}
 
-Dissertations
--------------
-{% bibliography --query @phdthesis %}
-
-Theses
+<a name="Theses"></a>Theses
 ------
-{% bibliography --query @mastersthesis %}
+{% bibliography --query @mastersthesis @phdthesis %}
