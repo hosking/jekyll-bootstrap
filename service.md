@@ -3,7 +3,7 @@ layout: page
 title: Service
 group: navigation
 ---
-|PLDI 2016||Program Committee|
+|[PLDI 2016](http://conf.researchr.org/committee/pldi-2016/pldi-2016-program-committee)||Program Committee|
 |[Onward! 2015](http://2015.splashcon.org/committee/onward2015-steering-committee)||Steering Committee|
 |[SPLASH 2015](http://2015.splashcon.org)||Steering Committee|
 |[SPLASH 2015](http://2015.splashcon.org)||Sponsorship Chair|
