@@ -19,11 +19,26 @@
   title =        {The Garbage Collection Handbook: The Art of Automatic Memory
                   Management},
   publisher =    {Chapman and Hall/CRC Press},
-  year =         2012,
+  year =         2011,
   series =       {CRC Applied Algorithms and Data Structures},
   month =        aug,
-  url =          {http://gchandbook.org}
+  url =          {http://gchandbook.org},
+  gscholar =     124
 }
+
+@Article{Blackburn+:2016:Evaluate,
+  author =       {Stephen M. Blackburn and Amer Diwan and Matthias Hauswirth
+                  and Peter F. Sweeney and Jos{\'e} Nelson Amaral and Tim
+                  Brecht and Lubomr Bulej and Cliff Click and Lieven Eeckhout
+                  and Sebastian Fischmeister and Daniel Frampton and Laurie
+                  J. Hendren and Michael Hind and Antony L. Hosking and
+                  Richard E. Jones and Tomas Kalibera and Nathan Keynes and
+                  Nathaniel Nystrom and Andreas Zeller},
+  title =        {The Truth, the Whole Truth, and Nothing but the Truth: A
+                  Pragmatic Guide to Assessing Empirical Evaluations},
+  journal =      toplas,
+  year =         2016,
+  note =         {In press, accepted February 2016}
 }
 
 @Article{Kalibera+2011TOCS,
@@ -32,12 +47,13 @@
   title =        {Scheduling Real-Time Garbage Collection on Uniprocessors},
   journal =      {ACM Transactions on Computer Systems},
   year =         2011,
-  volume =       3,
-  number =       1,
+  volume =       29,
+  number =       3,
   pages =        {8:1--29},
   month =        aug,
   doi =          {10.1145/2003690.2003692},
   acm =          {http://dl.acm.org/authorize?N93689},
+  gscholar =     7,
   abstract =     {Managed languages such as Java and C\# are increasingly
                   being considered for hard real-time applications because of
                   their productivity and software engineering
@@ -72,6 +88,7 @@
   pages =        {9:1--35},
   month =        aug,
   doi =          {10.5381/jot.2011.10.1.a9},
+  gscholar =     3,
   abstract =     {The indirection of object accesses is a common theme for
                   target domains as diverse as transparent distribution,
                   persistence, and program instrumentation. Virtualizing
@@ -109,12 +126,13 @@
   pages =        {47--64},
   month =        dec,
   doi =          {10.1016/j.entcs.2009.11.014},
+  gscholar =     7,
   abstract =     {The transformation of large, off-the-shelf Java applications
                   to support complex new functionality essentially requires
                   generation of an entirely new application that retains the
                   execution semantics of the original. We describe such a
                   whole-program modification in the context of RuggedJ, a
-                  dynamic transparent Java distribution system.<p>  We discuss
+                  dynamic transparent Java distribution system.<p> We discuss
                   the proxy-based object model that allows remote Java objects
                   to be referenced in the same way as those residing on the
                   current virtual machine, the optimizations that allow us to
@@ -146,6 +164,7 @@
   month =        aug,
   doi =          {10.1145/1378704.1378723},
   acm =          {http://dl.acm.org/authorize?N93660},
+  gscholar =     83,
   abstract =     {Evaluation methodology underpins all innovation in
                   experimental computer science. It requires relevant
                   <em>workloads</em>, appropriate <em>experimental
@@ -183,6 +202,7 @@
   pages =        {186--201},
   month =        dec,
   doi =          {10.1016/j.scico.2006.05.010},
+  gscholar =     145,
   abstract =     {We offer a reference model for nested transactions at the
                   level of memory accesses, and sketch possible hardware
                   architecture designs that implement that model. We describe
@@ -213,6 +233,7 @@
   pages =        {1613--1656},
   month =        oct,
   doi =          {10.1002/cpe.1008},
+  gscholar =     9,
   abstract =     {This paper proposes two approaches to managing concurrency
                   in Java using a <em>guarded region</em> abstraction. Both
                   approaches use <em>revocation</em> of such regions—the
@@ -247,6 +268,7 @@
   pages =        {164--186},
   month =        aug,
   doi =          {10.1016/j.scico.2005.03.001},
+  gscholar =     55,
   abstract =     {A transaction defines a locus of computation that satisfies
                   important concurrency and failure properties. These
                   so-called ACID properties provide strong serialization
@@ -280,6 +302,7 @@
   pages =        {1413--1439},
   month =        dec,
   doi =          {10.1002/spe.618},
+  gscholar =     11,
   abstract =     {Partial redundancy elimination (PRE) is a program
                   transformation that identifies and eliminates expressions
                   that are redundant on at least one (but not necessarily all)
@@ -314,6 +337,7 @@
   pages =        {577--600},
   month =        may,
   doi =          {10.1002/spe.371},
+  gscholar =     43,
   abstract =     {Pointer traversals pose significant overhead to the
                   execution of object-oriented programs, since every access to
                   an object’s state requires a pointer
@@ -342,6 +366,12 @@
                   path PRE using TBAA, and demonstrate that Java’s requirement
                   of precise exceptions can noticeably impact code-motion
                   optimizations like PRE.}
+}
+
+@Misc{Mu,
+  key =          "MicroVM",
+  title =        {The {M}u micro virtual machine},
+  url =          {http://microvm.org}
 }
 
 @InProceedings{Wang+2015SNAPL,
@@ -380,6 +410,51 @@
                   to remove an important barrier to performant and
                   semantically sound managed language design and
                   implementation.}
+}
+
+@InProceedings{Lin+2016ISMM,
+  author =       {Yi Lin and Stephen M. Blackburn and Antony L. Hosking and
+                  Michael Norrish},
+  title =        {Rust as a language for high performance {GC} implementation},
+  booktitle =    {ACM SIGPLAN International Symposium on Memory Management},
+  year =         2016,
+  pages =        {89-98},
+  month =        jun,
+  address =      {Santa Barbara, California},
+  doi =          {10.1145/2926697.2926707},
+  abstract =     {High performance garbage collectors build upon
+                  performance-critical low-level code, typically exhibit
+                  multiple levels of concurrency, and are prone to subtle
+                  bugs. Implementing, debugging and maintaining such
+                  collectors can therefore be extremely challenging. The
+                  choice of implementation language is a crucial consideration
+                  when building a collector. Typically, the drive for
+                  performance and the need for efficient support of low-level
+                  memory operations leads to the use of low-level languages
+                  like C or C++, which offer little by way of safety and
+                  software engineering benefits. This risks undermining the
+                  robustness and flexibility of the collector design. Rust's
+                  ownership model, lifetime specification, and reference
+                  borrowing deliver safety guarantees through a powerful
+                  static checker with little runtime overhead. These features
+                  make Rust a compelling candidate for a collector
+                  implementation language, but they come with restrictions
+                  that threaten expressiveness and efficiency. We describe our
+                  experience implementing an Immix garbage collector in Rust
+                  and C. We discuss the benefits of Rust, the obstacles
+                  encountered, and how we overcame them. We show that our
+                  Immix implementation has almost identical performance on
+                  micro benchmarks, compared to its implementation in C, and
+                  outperforms the popular BDW collector on the gcbench micro
+                  benchmark. We find that Rust's safety features do not create
+                  significant barriers to implementing a high performance
+                  collector. Though memory managers are usually considered
+                  low-level, our high performance implementation relies on
+                  very little unsafe code, with the vast majority of the
+                  implementation benefiting from Rust's safety. We see our
+                  experience as a compelling proof-of-concept of Rust as an
+                  implementation language for high performance garbage
+                  collection.}
 }
 
 @InProceedings{Hussein+2015SYSTOR,
@@ -425,7 +500,8 @@
   year =         2015,
   month =        jun,
   address =      {Portland, Oregon},
-  doi =          {10.1145/10.1145/2754169.2754187},
+  doi =          {10.1145/2754169.2754187},
+  gscholar =     3,
   abstract =     {Yieldpoints are critical to the implementation of high
                   performance garbage collected languages, yet the design
                   space is not well understood. Yieldpoints allow a running
@@ -488,6 +564,7 @@
   address =      {Portland, Oregon},
   doi =          {10.1145/2737924.2738006},
   acm =          {http://dl.acm.org/authorize?N93651},
+  gscholar =     1,
   abstract =     {We report on a machine-checked verification of safety for a
                   state-of-the-art, on-the-fly, concurrent, mark-sweep garbage
                   collector that is designed for multi-core architectures with
@@ -567,6 +644,7 @@
   address =      {Beijing, China},
   doi =          {10.1145/2258996.2259004},
   acm =          {http://dl.acm.org/authorize?N93653},
+  gscholar =     15,
   abstract =     {Read and write barriers mediate access to the heap allowing
                   the collector to control and monitor mutator actions. For
                   this reason, barriers are a powerful tool in the design of
@@ -606,6 +684,7 @@
   address =      {Kongens Lyngby, Denmark},
   doi =          {10.1145/2093157.2093184},
   acm =          {http://dl.acm.org/authorize?N93654},
+  gscholar =     9,
   abstract =     {Mutual-exclusion locking is the prevailing technique for
                   protecting shared resources in concurrent
                   programs. Fine-grained locking maximizes the opportunities
@@ -650,6 +729,7 @@
   address =      {San Jose, California},
   doi =          {10.1145/2212736.2212743},
   acm =          {http://dl.acm.org/authorize?N93666},
+  gscholar =     7,
   abstract =     {The Single-Chip Cloud Computer (SCC) is an experimental
                   processor created by Intel Labs. SCC is essentially a
                   ‘cluster-on-a-chip’, so X10 with its support for places and
@@ -679,6 +759,7 @@
   address =      {Toronto, Canada},
   doi =          {10.1145/1806596.1806615},
   acm =          {http://dl.acm.org/authorize?N93667},
+  gscholar =     58,
   abstract =     {Managed languages such as Java and C\# are being considered
                   for use in hard real-time systems. A hurdle to their
                   widespread adoption is the lack of garbage collection
@@ -710,6 +791,7 @@
   address =      {Toronto, Canada},
   doi =          {10.1145/1806651.1806666},
   acm =          {http://dl.acm.org/authorize?N93668},
+  gscholar =     3,
   abstract =     {Concurrent and incremental collectors require barriers to
                   ensure correct synchronisation between mutator and
                   collector. The overheads imposed by particular barriers on
@@ -729,12 +811,13 @@
   author =       {Tomas Kalibera and Filip Pizlo and Antony L. Hosking and Jan
                   Vitek},
   title =        {Scheduling Hard Real-Time Garbage Collection},
-  booktitle =    {IEEE Real=Time Systems Symposium},
+  booktitle =    {IEEE Real-Time Systems Symposium},
   year =         2009,
   pages =        {81--92},
   month =        dec,
   address =      {Washington, DC},
   doi =          {10.1109/RTSS.2009.40},
+  gscholar =     19,
   abstract =     {Managed languages such as Java and C\# are increasingly
                   being considered for hard real-time applications because of
                   their productivity and software engineering
@@ -771,6 +854,7 @@
   address =      {Denver, Colorado},
   doi =          {10.1145/1621607.1621620},
   acm =          {http://dl.acm.org/authorize?N93669},
+  gscholar =     4,
   abstract =     {The indirection of object accesses is a common theme for
                   target domains as diverse as transparent distribution,
                   persistence, and program instrumentation. Virtualizing
@@ -805,7 +889,7 @@
                   Analysis and Transformation},
   year =         2009,
   month =        mar,
-  address =      {York, England},
+  address =      {York, United Kingdom},
   abstract =     {The transformation of large, off-the-shelf Java applications
                   to support complex new functionality essentially requires
                   generation of an entirely new application that retains the
@@ -838,6 +922,7 @@
   address =      {Chattanooga, Tennessee},
   doi =          {10.1145/1508865.1508931},
   acm =          {http://dl.acm.org/authorize?66830},
+  gscholar =     72,
   abstract =     {This paper describes the development and initial evaluation
                   of a new course “Introduction to Computational Thinking”
                   taken by science majors to fulfill a college computing
@@ -866,6 +951,7 @@
   address =      {San Diego, California},
   doi =          {10.1145/1254766.1254784},
   acm =          {http://dl.acm.org/authorize?N93661},
+  gscholar =     14,
   abstract =     {Memory management is a critical issue for correctness and
                   performance in real-time embedded systems. Recent work on
                   real-time garbage collectors has shown that it is possible
@@ -896,6 +982,7 @@
   address =      {San Jose, California},
   doi =          {10.1145/1229428.1229442},
   acm =          {http://dl.acm.org/authorize?N93662},
+  gscholar =     176,
   abstract =     {Transactional memory (TM) promises to simplify concurrent
                   programming while providing scalability competitive to
                   fine-grained locking. Language-based constructs allow
@@ -948,6 +1035,7 @@
   address =      {Portland, Oregon},
   doi =          {10.1145/1167473.1167488},
   acm =          {http://dl.acm.org/authorize?N93663},
+  gscholar =     1006,
   abstract =     {Since benchmarks drive computer science research and
                   industry product development, which ones we use and how we
                   evaluate them are key questions for the community. Despite
@@ -986,8 +1074,9 @@
   year =         2006,
   pages =        {148--173},
   month =        jul,
-  organization = {Nantes, France},
+  location =     {Nantes, France},
   doi =          {10.1007/11785477_8},
+  gscholar =     38,
   abstract =     {Concurrent data accesses in high-level languages like Java
                   and C\# are typically mediated using mutual-exclusion
                   locks. Threads use locks to <em>guard</em> the operations
@@ -1030,6 +1119,7 @@
   address =      {Ottawa, Canada},
   doi =          {10.1145/1133956.1133963},
   acm =          {http://dl.acm.org/authorize?N93664},
+  gscholar =     8,
   abstract =     {Modern commodity platforms increasingly support thread-level
                   parallelism, which must be exploited by garbage collected
                   applications. We describe the design and implementation of a
@@ -1053,6 +1143,7 @@
   address =      {Ottawa, Canada},
   doi =          {10.1145/1133956.1133960},
   acm =          {http://dl.acm.org/authorize?N93675},
+  gscholar =     24,
   abstract =     {As programming languages with managed runtimes become
                   increasingly popular, it is essential that virtual machines
                   are implemented efficiently. The performance of the memory
@@ -1087,6 +1178,7 @@
   month =        oct,
   address =      {San Diego, California},
   doi =          {1802/2099},
+  gscholar =     65,
   abstract =     {We offer a reference model for nested transactions at the
                   level of memory accesses, and sketch possible hardware
                   architecture designs that implement that model. We describe
@@ -1118,6 +1210,7 @@
   address =      {San Diego, California},
   doi =          {10.1145/1094811.1094845},
   acm =          {http://dl.acm.org/authorize?N93676},
+  gscholar =     174,
   abstract =     {A future is a simple and elegant abstraction that allows
                   concurrency to be expressed often through a relatively small
                   rewrite of a sequential program. In the absence of
@@ -1163,6 +1256,7 @@
   address =      {Boston, Massachusetts},
   doi =          {10.1145/1024393.1024417},
   acm =          {http://dl.acm.org/authorize?N93678},
+  gscholar =     27,
   abstract =     {Tracing garbage collectors traverse references from live
                   program variables, transitively tracing out the closure of
                   live objects. Memory accesses incurred during tracing are
@@ -1204,6 +1298,7 @@
   address =      {Vancouver, Canada},
   doi =          {10.1145/1029873.1029891},
   acm =          {http://dl.acm.org/authorize?66848},
+  gscholar =     79,
   abstract =     {Modern garbage collectors rely on read and write barriers
                   imposed on heap accesses by the mutator, to keep track of
                   references between different regions of the garbage
@@ -1247,7 +1342,8 @@
   month =        aug,
   address =      {Montr{\'e}al, Canada},
   doi =          {10.1109/ICPP.2004.1327963},
-  abstract =     { Priority inversion occurs in concurrent programs when
+  gscholar =     20,
+  abstract =     {Priority inversion occurs in concurrent programs when
                   low-priority threads hold shared resources needed by some
                   high-priority thread, causing them to block
                   indefinitely. Shared resources are usually guarded by
@@ -1287,7 +1383,8 @@
   month =        jun,
   address =      {Oslo, Norway},
   doi =          {10.1007/b98195},
-  abstract =     { <em>Transactional monitors</em> are proposed as an
+  gscholar =     109,
+  abstract =     {<em>Transactional monitors</em> are proposed as an
                   alternative to monitors based on mutual-exclusion
                   synchronization for object-oriented programming
                   languages. Transactional monitors have execution semantics
@@ -1320,6 +1417,7 @@
   month =        {March/April},
   address =      {Barcelona, Spain},
   doi =          {10.1007/b96702},
+  gscholar =     39,
   abstract =     {A transaction defines a locus of computation that satisfies
                   important concurrency and failure properties; these
                   so-called ACID properties provide strong serialization
@@ -1345,6 +1443,7 @@
   month =        {March/April},
   address =      {Barcelona, Spain},
   doi =          {10.1007/b95956},
+  gscholar =     26,
   abstract =     {Partial redundancy elimination (PRE) is a program
                   transformation that identifies and eliminates expressions
                   that are redundant on at least one (but not necessarily all)
@@ -1388,6 +1487,7 @@
   address =      {Anaheim, California},
   doi =          {10.1145/965660.965674},
   acm =          {http://dl.acm.org/authorize?N93679},
+  gscholar =     36,
   abstract =     {Eclipse is a full-featured and easily extensible integrated
                   development environment. As such, it has grown to include a
                   large degree of functionality that may be overwhelming to
@@ -1422,6 +1522,7 @@
   month =        jun,
   address =      {Budapest, Hungary},
   doi =          {10.1007/3-540-45337-7_11},
+  gscholar =     18,
   abstract =     {The effectiveness of garbage collectors and leak detectors
                   in identifying dead objects depends on the “accuracy” of
                   their reachability traversal. Accuracy has two orthogonal
@@ -1453,6 +1554,7 @@
   month =        sep,
   address =      {Lillehammer, Norway},
   doi =          {10.1007/3-540-45498-5_2},
+  gscholar =     2,
   abstract =     {Aggressive optimization of programs often relies on analysis
                   and transformation that cuts across the natural abstraction
                   boundaries of the source programming language, such as
@@ -1487,6 +1589,7 @@
   address =      {Denver, Colorado},
   doi =          {10.1145/320384.320427},
   acm =          {http://dl.acm.org/authorize?N93670},
+  gscholar =     16,
   abstract =     {We describe how reachability-based orthogonal persistence
                   can be supported even in uncooperative implementations of
                   languages such as C++ and Modula-3, and without modification
@@ -1516,6 +1619,7 @@
   month =        sep,
   address =      {Edinburgh, Scotland},
   url =          {http://www.vldb.org/conf/1999/P55.pdf},
+  gscholar =     17,
   abstract =     {PM3 is an orthogonally persistent extension of the Modula-3
                   systems programming language, supporting persistence by
                   reachability from named persistent roots. We describe the
@@ -1547,6 +1651,7 @@
   month =        aug,
   address =      {Tiburon, California},
   publisher =    {Morgan Kaufmann},
+  gscholar =     17,
   abstract =     {<em>Swizzling</em> refers to the translation of object
                   references from an external, persistent format to an
                   internal, transient format used during application
@@ -1596,6 +1701,7 @@
   month =        aug,
   address =      {Tiburon, California},
   publisher =    {Morgan Kaufmann},
+  gscholar =     30,
   abstract =     {Persistent programming languages manage volatile memory as a
                   cache for stable storage, imposing a <em>read barrier</em>
                   on operations that access the cache, and a <em>write
@@ -1634,6 +1740,7 @@
   month =        aug,
   address =      {Tiburon, California},
   publisher =    {Morgan Kaufmann},
+  gscholar =     9,
   abstract =     {The so-called 'read' and 'write' barriers present an
                   obstacle to the efficient execution of persistent programs
                   that use a volatile object buffer, non-volatile object store
@@ -1676,6 +1783,7 @@
   month =        aug,
   address =      {Half Moon Bay, California},
   publisher =    {Sun Microsystems Technical Report 97-63},
+  gscholar =     14,
   abstract =     {Persistent systems manage main memory as a cache for
                   efficient access to frequently-accessed persistent
                   data. Good cache management requires some knowledge of the
@@ -1706,6 +1814,7 @@
   month =        may,
   address =      {Cape May, New Jersey},
   publisher =    {Morgan Kaufmann},
+  gscholar =     11,
   abstract =     {We explore the ramifications of object residency assumptions
                   and their impact on residency checking for several
                   subroutine dispatch scenarios: procedural, static
@@ -1730,6 +1839,7 @@
   month =        sep,
   address =      {Drymen, Scotland},
   publisher =    {Sun Microsystems Technical Report 96-58},
+  gscholar =     38,
   abstract =     {We describe and name a range of approaches to adding
                   persistence to the Java programming language. Java is
                   interesting in this regard not only because of the current
@@ -1760,6 +1870,7 @@
   month =        sep,
   address =      {Tarascon, France},
   publisher =    {Springer},
+  gscholar =     22,
   abstract =     {We consider some issues in optimizing persistent programming
                   languages. In particular, we show how to express
                   optimizations of object residency checks in strongly typed
@@ -1803,6 +1914,7 @@
   address =      {Asheville, North Carolina},
   doi =          {10.1145/168619.168628},
   acm =          {http://dl.acm.org/authorize?N93671},
+  gscholar =     72,
   abstract =     {Many operating systems allow user programs to specify the
                   protection level (inaccessible, read-only, read-write) of
                   pages in their virtual memory address space, and to handle
@@ -1834,6 +1946,7 @@
   address =      {Washington, DC},
   doi =          {10.1145/165854.165907},
   acm =          {http://dl.acm.org/authorize?N93672},
+  gscholar =     46,
   abstract =     {A key mechanism of a persistent programming language is its
                   ability to detect and handle references to non-resident
                   objects. Ideally, this mechanism should be hidden from the
@@ -1857,6 +1970,7 @@
   month =        aug,
   address =      {Dublin, Ireland},
   url =          {http://www.vldb.org/conf/1993/P429.PDF},
+  gscholar =     22,
   abstract =     {If persistent programming languages are to be accepted they
                   must provide many of the standard features of traditional
                   database systems, including resilience in the face of system
@@ -1884,6 +1998,7 @@
   address =      {Vancouver, Canada},
   doi =          {10.1145/141936.141946},
   acm =          {http://dl.acm.org/authorize?N93688},
+  gscholar =     149,
   abstract =     {Generational garbage collectors are able to achieve very
                   small pause times by concentrating on the youngest (most
                   recently allocated) objects when collecting, since objects
@@ -1908,6 +2023,7 @@
   month =        sep,
   address =      {Martha's Vineyard, Massachusetts},
   publisher =    {Morgan Kaufmann},
+  gscholar =     31,
   abstract =     {We consider how a persistent programming language might
                   offer performance competitive with that of non-persistent
                   languages, at least on memory resident data. We are
@@ -1935,9 +2051,9 @@
   doi =          {10.1007/3-540-45498-5_13}
 }
 
-@Article{Hosking+2000SPE,
-  editor =       {Antony L. Hosking and Quintin Cutts},
-  title =        {Special Issue on Persistent Object Systems},
+@Article{HoskingCutts2000SPE,
+  author =       {Antony L. Hosking and Quintin Cutts},
+  title =        {Editorial: Special Issue on Persistent Object Systems},
   journal =      {Software --- Practice and Experience},
   year =         2000,
   volume =       30,
@@ -1945,7 +2061,8 @@
   pages =        {293--294},
   month =        apr,
   doi =
-                  {10.1002/(SICI)1097-024X(20000410)30:4<293::AID-SPE300>3.0.CO;2-Y}
+                  {10.1002/(SICI)1097-024X(20000410)30:4<293::AID-SPE300>3.0.CO;2-Y},
+  gscholar =     2
 }
 
 @Proceedings{Hosking+2013DLS,
@@ -2060,14 +2177,15 @@
                   optimizations like PRE.}
 }
 
-@InProceedings{Hosking+1997GC,
+@InProceedings{HoskingNovianto1997GC,
   author =       {Antony L. Hosking and Aria P. Novianto},
   title =        {Reachability-Based Orthogonal Persistence for C, C++, and
-                  Othr Intransigents},
+                  Other Intransigents},
   booktitle =    {OOPSLA Workshop on Garbage Collection and Memory Management},
   year =         1997,
   month =        oct,
   address =      {Atlanta, Georgia},
+  gscholar =     3,
   abstract =     {We describe how reachability-based orthogonal persistence
                   can be supported even in uncooperative implementations of
                   languages such as C and C++, where there is no support for
@@ -2116,7 +2234,8 @@
   editor =       {Ben Zorn and Akmal B. Chaudri},
   month =        oct,
   address =      {Austin, Texas},
-  doi =          {10.1145/260111.260272}
+  doi =          {10.1145/260111.260272},
+  gscholar =     7
 }
 
 @InProceedings{Hosking+1993GC,
@@ -2128,6 +2247,7 @@
   month =        sep,
   address =      {Washington, DC},
   url =          {ftp://ftp.cs.utexas.edu/pub/garbage/GC93/hosking.ps},
+  gscholar =     60,
   abstract =     {Remembered sets and dirty bits have been proposed as
                   alternative implementations of the write barrier for garbage
                   collection. There are advantages to both approaches. Dirty
@@ -2150,6 +2270,7 @@
   month =        oct,
   address =      {Phoenix, Arizona},
   doi =          {10.1145/143776.143792},
+  gscholar =     8,
   abstract =     {Reachability-based persistence imposes new requirements for
                   main memory management in general, and garbage collection in
                   particular. After a brief introduction to the
@@ -2158,6 +2279,25 @@
                   manager for Persistent Smalltalk and Persistent Modula-3,
                   which allows the reclamation of storage from both temporary
                   objects and buffered persistent objects.}
+}
+
+@TechReport{Blackburn+2012TR,
+  author =       {Stephen M. Blackburn and Amer Diwan and Matthias Hauswirth
+                  and Peter F. Sweeney and Jos{\'e} Nelson Amaral and
+                  Vlastimil Babka and Walter Binder and Tim Brecht and
+                  Lubom{\'i}r Bulej and Lieven Eeckhout, Sebastian
+                  Fischmeister and Daniel Frampton and Robin Garner and Andy
+                  Georges and Laurie J. Hendren and Michael Hind and Antony
+                  L. Hosking, Richard Jones and Tomas Kalibera and Philippe
+                  Moret and Nathaniel Nystrom and Victor Pankratius and Petr
+                  Tuma},
+  title =        {Can you trust your experimental results?},
+  institution =  {Evaluate Collaboratory},
+  month =        feb,
+  year =         2012,
+  number =       1,
+  url =
+                  {http://sape.inf.usi.ch/sites/default/files/publication/EvaluateCollaboratoryTR1.pdf}
 }
 
 @TechReport{Blackburn+2006TR,
@@ -2175,6 +2315,7 @@
   type =         {Technical Report},
   number =       {TR-CS-06-01},
   url =          {http://dacapobench.org},
+  gscholar =     20,
   abstract =     {Since benchmarks drive computer science research and
                   industry product development, which ones we use and how we
                   evaluate them are key questions for the community. Despite
@@ -2212,7 +2353,8 @@
   type =         {Department of Computer Science Technical Report},
   number =       {03-032},
   month =        oct,
-  url =          {http://docs.lib.purdue.edu/cstech/1581}
+  url =          {http://docs.lib.purdue.edu/cstech/1581},
+  gscholar =     2
 }
 
 @TechReport{Flack+2003TR,
@@ -2224,6 +2366,7 @@
   number =       {03-017},
   month =        may,
   url =          {http://docs.lib.purdue.edu/cstech/1566},
+  gscholar =     14,
   abstract =     {The need to express important non-Java behaviors confronts
                   the Ovm virtual machine framework no less than anyother
                   VM-in-Java project such as JikesRVM. Any suchnproject needs
@@ -2314,6 +2457,7 @@
   number =       {95-084},
   month =        dec,
   url =          {http://docs.lib.purdue.edu/cstech/1256},
+  gscholar =     6,
   abstract =     {Many systems must dynamically track writes to cached data,
                   for the purpose of reconciling those updates with respect to
                   the permanent or global state of the data.  For example,
@@ -2348,6 +2492,7 @@
   school =       {University of Massachusetts at Amherst},
   year =         1995,
   month =        feb,
+  gscholar =     17,
   abstract =     {Persistent programming languages combine the features of
                   database systems and programming languages to allow the
                   seamless manipulation of both short- and long-term data,
@@ -2399,6 +2544,7 @@
   organization = {University of Massachusetts at Amherst},
   month =        feb,
   year =         1992,
+  gscholar =     7,
   abstract =     {We present the client interface of the prototype Mneme
                   persistent object store. Mneme stores <em>objects</em>,
                   preserving their identity and structural relationships.  Its
@@ -2419,6 +2565,7 @@
   month =        mar,
   url =
                   {https://web.cs.umass.edu/publication/docs/1991/UM-CS-1991-025.pdf},
+  gscholar =     17,
   abstract =     {We present the design and implementation of Persistent
                   Modula-3, a compiled, optimized, persistent programming
                   language. The design allows the evaluation of performance
@@ -2439,6 +2586,7 @@
   month =        may,
   url =
                   {https://web.cs.umass.edu/publication/docs/1990/UM-CS-1990-045.pdf},
+  gscholar =     13,
   abstract =     {We present an approach to supporting persistence in
                   heap-based programming languages, called object faulting. By
                   modifying the language run-time system, we provide the
@@ -2668,7 +2816,7 @@
   school =       {Purdue University},
   year =         1998,
   month =        may,
-  abstract =     { Persistent programming languages provide object persistence
+  abstract =     {Persistent programming languages provide object persistence
                   across program invocations, by treating volatile memory as a
                   cache for stable storage. Orthogonal persistence allows any
                   object to be potentially persistent, without any restriction

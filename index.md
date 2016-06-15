@@ -25,6 +25,8 @@ Machinery](http://www.acm.org), and was named a [Distinguished Scientist of
 the ACM](http://awards.acm.org/award_winners/hosking_3211455.cfm) in 2012.
 
 I am co-author of the primary reference work for automatic memory management
-[*The Garbage Collection Handbook*](http://gchandbook.org).
+[*The Garbage Collection Handbook*](http://gchandbook.org), now translated to
+Japanese!
 
 [![GC Handbook](img/GCHandbook.png)](http://gchandbook.org)
+[![GC Handbook](img/GCHandbook-jp.png)](http://gchandbook.org)
