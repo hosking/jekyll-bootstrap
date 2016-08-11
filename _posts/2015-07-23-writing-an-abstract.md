@@ -45,7 +45,6 @@ Authors](http://www.nature.com/nature/authors/gta).
       words. (This example is 190 words without the final section, and 250
       words with it.)
     </div>
-    </ul>
   </div>
   <div class="col-sm-6">
     <span class="bg-info">

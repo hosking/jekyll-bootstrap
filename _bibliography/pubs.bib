@@ -14,19 +14,23 @@
 @string{nov={November}}
 @string{dec={December}}
 
+@string{toplas={ACM Transactions on Programming Languages}}
+@string{tocs={ACM Transactions on Computer Systems}}
+
 @Book{JHM2011,
   author =       {Richard Jones and Antony Hosking and Eliot Moss},
   title =        {The Garbage Collection Handbook: The Art of Automatic Memory
                   Management},
   publisher =    {Chapman and Hall/CRC Press},
   year =         2011,
+  pages =        511,
   series =       {CRC Applied Algorithms and Data Structures},
   month =        aug,
   url =          {http://gchandbook.org},
-  gscholar =     124
+  gscholar =     133
 }
 
-@Article{Blackburn+:2016:Evaluate,
+@Article{Blackburn+2016TOPLAS,
   author =       {Stephen M. Blackburn and Amer Diwan and Matthias Hauswirth
                   and Peter F. Sweeney and Jos{\'e} Nelson Amaral and Tim
                   Brecht and Lubomr Bulej and Cliff Click and Lieven Eeckhout
@@ -45,7 +49,7 @@
   author =       {Tomas Kalibera and Filip Pizlo and Antony L. Hosking and Jan
                   Vitek},
   title =        {Scheduling Real-Time Garbage Collection on Uniprocessors},
-  journal =      {ACM Transactions on Computer Systems},
+  journal =      tocs,
   year =         2011,
   volume =       29,
   number =       3,
@@ -53,7 +57,7 @@
   month =        aug,
   doi =          {10.1145/2003690.2003692},
   acm =          {http://dl.acm.org/authorize?N93689},
-  gscholar =     7,
+  gscholar =     9,
   abstract =     {Managed languages such as Java and C\# are increasingly
                   being considered for hard real-time applications because of
                   their productivity and software engineering
@@ -126,7 +130,7 @@
   pages =        {47--64},
   month =        dec,
   doi =          {10.1016/j.entcs.2009.11.014},
-  gscholar =     7,
+  gscholar =     8,
   abstract =     {The transformation of large, off-the-shelf Java applications
                   to support complex new functionality essentially requires
                   generation of an entirely new application that retains the
@@ -164,7 +168,7 @@
   month =        aug,
   doi =          {10.1145/1378704.1378723},
   acm =          {http://dl.acm.org/authorize?N93660},
-  gscholar =     83,
+  gscholar =     85,
   abstract =     {Evaluation methodology underpins all innovation in
                   experimental computer science. It requires relevant
                   <em>workloads</em>, appropriate <em>experimental
@@ -192,7 +196,7 @@
                   methodological foundations.}
 }
 
-@Article{MossHosking2006SCP,
+@Article{Moss+2006SCP,
   author =       {J. Eliot B. Moss and Antony L. Hosking},
   title =        {Nested Transactional Memory: Model and Architecture
                   Sketches},
@@ -202,7 +206,7 @@
   pages =        {186--201},
   month =        dec,
   doi =          {10.1016/j.scico.2006.05.010},
-  gscholar =     145,
+  gscholar =     150,
   abstract =     {We offer a reference model for nested transactions at the
                   level of memory accesses, and sketch possible hardware
                   architecture designs that implement that model. We describe
@@ -223,7 +227,7 @@
                   scope of the paper.}
 }
 
-@Article{Welc+:2006:CCPE,
+@Article{Welc+2006CCPE,
   author =       {Adam Welc and Suresh Jagannathan and Antony L. Hosking},
   title =        {Revocation Techniques for {J}ava Concurrency},
   journal =      {Concurrency and Computation --- Practice and Experience},
@@ -268,7 +272,7 @@
   pages =        {164--186},
   month =        aug,
   doi =          {10.1016/j.scico.2005.03.001},
-  gscholar =     55,
+  gscholar =     56,
   abstract =     {A transaction defines a locus of computation that satisfies
                   important concurrency and failure properties. These
                   so-called ACID properties provide strong serialization
@@ -291,7 +295,7 @@
                   properties for our semantics.}
 }
 
-@Article{VanDrunenHosking2004SPE,
+@Article{VanDrunen+2004SPE,
   author =       {Thomas VanDrunen and Antony L. Hosking},
   title =        {Anticipation-Based Partial Redundancy Elimination for Static
                   Single Assignment Form},
@@ -374,42 +378,17 @@
   url =          {http://microvm.org}
 }
 
-@InProceedings{Wang+2015SNAPL,
-  author =       {Kunshan Wang and Yi Lin and Stephen M. Blackburn and Michael
-                  Norrish and Antony L. Hosking},
-  title =        {Draining the Swamp: Micro Virtual machines as Solid
-                  Foundation for Language Development},
-  booktitle =    {Inaugural Summit on Advances in Programming Languages},
-  year =         2015,
-  series =       {SNAPL},
-  month =        may,
-  address =      {Asilomar, California},
-  doi =          {10.4230/LIPIcs.SNAPL.2015.321},
-  abstract =     {Many of today’s programming languages are broken. Poor
-                  performance, lack of features and hard-to-reason-about
-                  semantics can cost dearly in software maintenance and
-                  inefficient execution. The problem is only getting worse
-                  with programming languages proliferating and hardware
-                  becoming more complicated. An important reason for this
-                  brokenness is that much of language design is
-                  implementation-driven. The difficulties in implementation
-                  and insufficient understanding of concepts bake bad
-                  designs into the language itself. Concurrency, architectural
-                  details and garbage collection are three fundamental
-                  concerns that contribute much to the complexities of
-                  implementing managed languages.  <p> We propose the
-                  <em>micro virtual machine</em>, a thin abstraction designed
-                  specifically to relieve implementers of managed languages of
-                  the most fundamental implementation challenges that
-                  currently impede good design. The micro virtual machine
-                  targets abstractions over memory (garbage collection),
-                  architecture (compiler backend), and concurrency. We
-                  motivate the micro virtual machine and give an account of
-                  the design and initial experience of a concrete instance,
-                  which we call Mu, built over a two year period. Our goal is
-                  to remove an important barrier to performant and
-                  semantically sound managed language design and
-                  implementation.}
+@InProceedings{Chapman+2016OOPSLA,
+  author =       {Keith Chapman and Antony L. Hosking and J. Eliot B. Moss},
+  title =        {Hybrid {STM}/{HTM} for Nested Transactions on {O}pen{JDK}},
+  booktitle =    {ACM SIGPLAN Conference on Object-Oriented Programming,
+                  Systems, Languages, and Applications},
+  series =       {OOPSLA},
+  year =         2016,
+  month =        oct,
+  address =      {Amsterdam, The Netherlands},
+  doi =          {10.1145/2983990.2984029},
+  note =         {Accepted, to appear}
 }
 
 @InProceedings{Lin+2016ISMM,
@@ -417,6 +396,7 @@
                   Michael Norrish},
   title =        {Rust as a language for high performance {GC} implementation},
   booktitle =    {ACM SIGPLAN International Symposium on Memory Management},
+  series =       {ISMM},
   year =         2016,
   pages =        {89-98},
   month =        jun,
@@ -457,15 +437,56 @@
                   collection.}
 }
 
+@InProceedings{Wang+2015SNAPL,
+  author =       {Kunshan Wang and Yi Lin and Stephen M. Blackburn and Michael
+                  Norrish and Antony L. Hosking},
+  title =        {Draining the Swamp: Micro Virtual machines as Solid
+                  Foundation for Language Development},
+  booktitle =    {Inaugural Summit on Advances in Programming Languages},
+  series =       {SNAPL},
+  editor =       {Thomas Ball and Rastislav Bod{\'i}k and Shriram
+                  Krishnamurthi and Benjamin S. Lerner and Greg Morrisett},
+  year =         2015,
+  month =        may,
+  pages =        {321-336},
+  address =      {Asilomar, California},
+  doi =          {10.4230/LIPIcs.SNAPL.2015.321},
+  abstract =     {Many of today’s programming languages are broken. Poor
+                  performance, lack of features and hard-to-reason-about
+                  semantics can cost dearly in software maintenance and
+                  inefficient execution. The problem is only getting worse
+                  with programming languages proliferating and hardware
+                  becoming more complicated. An important reason for this
+                  brokenness is that much of language design is
+                  implementation-driven. The difficulties in implementation
+                  and insufficient understanding of concepts bake bad designs
+                  into the language itself. Concurrency, architectural details
+                  and garbage collection are three fundamental concerns that
+                  contribute much to the complexities of implementing managed
+                  languages.  <p> We propose the <em>micro virtual
+                  machine</em>, a thin abstraction designed specifically to
+                  relieve implementers of managed languages of the most
+                  fundamental implementation challenges that currently impede
+                  good design. The micro virtual machine targets abstractions
+                  over memory (garbage collection), architecture (compiler
+                  backend), and concurrency. We motivate the micro virtual
+                  machine and give an account of the design and initial
+                  experience of a concrete instance, which we call Mu, built
+                  over a two year period. Our goal is to remove an important
+                  barrier to performant and semantically sound managed
+                  language design and implementation.}
+}
+
 @InProceedings{Hussein+2015SYSTOR,
   author =       {Ahmed Hussein and Mathias Payer and Antony L. Hosking and
                   Christopher A. Vick},
   title =        {Impact of GC Design on Power and Performance for Android},
   booktitle =    {ACM International Systems and Storage Conference},
-  year =         2015,
   series =       {SYSTOR},
+  year =         2015,
   month =        may,
   address =      {Haifa, Israel},
+  pages =        {13:1--12},
   doi =          {10.1145/2757667.2757674},
   abstract =     {Small mobile devices have evolved to versatile computing
                   systems. Android devices run a complete software stack,
@@ -497,11 +518,13 @@
                   L. Hosking and Michael Norrish},
   title =        {Stop and Go: Understanding Yieldpoint Behavior},
   booktitle =    {ACM SIGPLAN International Symposium on Memory Management},
+  series =       {ISMM},
   year =         2015,
   month =        jun,
   address =      {Portland, Oregon},
   doi =          {10.1145/2754169.2754187},
-  gscholar =     3,
+  pages =        {70-80},
+  gscholar =     4,
   abstract =     {Yieldpoints are critical to the implementation of high
                   performance garbage collected languages, yet the design
                   space is not well understood. Yieldpoints allow a running
@@ -533,9 +556,11 @@
                   Christopher A. Vick},
   title =        {Don’t Race the Memory Bus: Taming the GC Leadfoot},
   booktitle =    {ACM SIGPLAN International Symposium on Memory Management},
+  series =       {ISMM},
   year =         2015,
   month =        jun,
   address =      {Portland, Oregon},
+  pages =        {15--27},
   doi =          {10.1145/2754169.2754182},
   abstract =     {Dynamic voltage and frequency scaling (DVFS) is ubiquitous
                   on mobile devices as a mechanism for saving energy. Reducing
@@ -559,12 +584,14 @@
                   x86-TSO},
   booktitle =    {ACM SIGPLAN International Conference on Programming Language
                   Design and Implementation},
+  series =       {PLDI},
   year =         2015,
   month =        jun,
   address =      {Portland, Oregon},
   doi =          {10.1145/2737924.2738006},
+  pages =        {99-109},
   acm =          {http://dl.acm.org/authorize?N93651},
-  gscholar =     1,
+  gscholar =     2,
   abstract =     {We report on a machine-checked verification of safety for a
                   state-of-the-art, on-the-fly, concurrent, mark-sweep garbage
                   collector that is designed for multi-core architectures with
@@ -584,6 +611,7 @@
   title =        {Relaxing Safely: Verified On-the-Fly Garbage Collection for
                   x86-TSO},
   booktitle =    {Archive of Formal Proofs},
+  series =       {AFP},
   month =        apr,
   year =         2015,
   url =          {http://afp.sourceforge.net/entries/ConcurrentGC.shtml},
@@ -601,8 +629,8 @@
   booktitle =    {International Conference on the Principles and Practice of
                   Programming on the Java platform: virtual machines,
                   languages, and tools},
-  year =         2014,
   series =       {PPPJ},
+  year =         2014,
   pages =        {169--180},
   month =        sep,
   address =      {Cracow, Poland},
@@ -638,6 +666,7 @@
                   Antony L. Hosking},
   title =        {Barriers Reconsidered, Friendlier Still!},
   booktitle =    {ACM SIGPLAN International Symposium on Memory Management},
+  series =       {ISMM},
   year =         2012,
   pages =        {37--48},
   month =        jun,
@@ -678,6 +707,7 @@
   booktitle =    {International Conference on the Principles and Practice of
                   Programming on the Java platform: virtual machines,
                   languages, and tools},
+  series =       {PPPJ},
   year =         2011,
   pages =        {171--181},
   month =        aug,
@@ -722,14 +752,14 @@
 @InProceedings{Chapman+2011X10,
   author =       {Keith Chapman and Ahmed Hussein and Antony L. Hosking},
   title =        {X10 on the Single-Chip Cloud Computer},
-  booktitle =    {PLDI X10 Workshop},
+  booktitle =    {X10 Workshop},
   year =         2011,
   pages =        {7:1--8},
   month =        jun,
   address =      {San Jose, California},
   doi =          {10.1145/2212736.2212743},
   acm =          {http://dl.acm.org/authorize?N93666},
-  gscholar =     7,
+  gscholar =     8,
   abstract =     {The Single-Chip Cloud Computer (SCC) is an experimental
                   processor created by Intel Labs. SCC is essentially a
                   ‘cluster-on-a-chip’, so X10 with its support for places and
@@ -753,13 +783,14 @@
   title =        {Schism: Fragmentation-Tolerant Real-Time Garbage Collection},
   booktitle =    {ACM SIGPLAN International Conference on Programming Language
                   Design and Implementation},
+  series =       {PLDI},
   year =         2010,
   pages =        {146--159},
   month =        jun,
   address =      {Toronto, Canada},
   doi =          {10.1145/1806596.1806615},
   acm =          {http://dl.acm.org/authorize?N93667},
-  gscholar =     58,
+  gscholar =     61,
   abstract =     {Managed languages such as Java and C\# are being considered
                   for use in hard real-time systems. A hurdle to their
                   widespread adoption is the lack of garbage collection
@@ -785,6 +816,7 @@
   author =       {Laurence Hellyer and Richard Jones and Antony L. Hosking},
   title =        {The Locality of Concurrent Write Barriers},
   booktitle =    {ACM SIGPLAN International Symposium on Memory Management},
+  series =       {ISMM},
   year =         2010,
   pages =        {83--92},
   month =        jun,
@@ -812,6 +844,7 @@
                   Vitek},
   title =        {Scheduling Hard Real-Time Garbage Collection},
   booktitle =    {IEEE Real-Time Systems Symposium},
+  series =       {RTSS},
   year =         2009,
   pages =        {81--92},
   month =        dec,
@@ -848,6 +881,7 @@
                   Virtualized Access},
   booktitle =    {ACM SIGPLAN Conference on Generative Programming and
                   Component Engineering},
+  series =       {GPCE},
   year =         2009,
   pages =        {75--84},
   month =        oct,
@@ -881,7 +915,7 @@
                   object model.}
 }
 
-@InProceedings{McGachey2009BYTECODE,
+@InProceedings{McGachey+2009BYTECODE,
   author =       {Phil McGachey and Antony L. Hosking and J. Eliot B. Moss},
   title =        {Pervasive Load-Time Transformation for Transparently
                   Distributed Java},
@@ -922,7 +956,7 @@
   address =      {Chattanooga, Tennessee},
   doi =          {10.1145/1508865.1508931},
   acm =          {http://dl.acm.org/authorize?66830},
-  gscholar =     72,
+  gscholar =     81,
   abstract =     {This paper describes the development and initial evaluation
                   of a new course “Introduction to Computational Thinking”
                   taken by science majors to fulfill a college computing
@@ -945,6 +979,7 @@
   title =        {Hierarchical Real-Time Garbage Collection},
   booktitle =    {ACM SIGPLAN/SIGBED Conference on Languages, Compilers, and
                   Tools for Embedded Systems},
+  series =       {LCTES},
   year =         2007,
   pages =        {123--133},
   month =        jun,
@@ -976,13 +1011,14 @@
   title =        {Open Nesting in Software Transactional Memory},
   booktitle =    {ACM SIGPLAN Symposium on Principles and Practice of Parallel
                   Programming},
+  series =       {PPoPP},
   year =         2007,
   pages =        {68--78},
   month =        mar,
   address =      {San Jose, California},
   doi =          {10.1145/1229428.1229442},
   acm =          {http://dl.acm.org/authorize?N93662},
-  gscholar =     176,
+  gscholar =     186,
   abstract =     {Transactional memory (TM) promises to simplify concurrent
                   programming while providing scalability competitive to
                   fine-grained locking. Language-based constructs allow
@@ -1029,13 +1065,14 @@
                   Analysis},
   booktitle =    {ACM SIGPLAN Conference on Object-Oriented Programming,
                   Systems, Languages, and Applications},
+  series =       {OOPSLA},
   year =         2006,
   pages =        {169--190},
   month =        oct,
   address =      {Portland, Oregon},
   doi =          {10.1145/1167473.1167488},
   acm =          {http://dl.acm.org/authorize?N93663},
-  gscholar =     1006,
+  gscholar =     1046,
   abstract =     {Since benchmarks drive computer science research and
                   industry product development, which ones we use and how we
                   evaluate them are key questions for the community. Despite
@@ -1070,13 +1107,14 @@
   title =        {Transparently Reconciling Transactions with Locking for
                   {J}ava Synchronization},
   booktitle =    {European Conference on Object-Oriented Programming},
+  series =       {ECOOP},
   volume =       4067,
   year =         2006,
   pages =        {148--173},
   month =        jul,
   location =     {Nantes, France},
   doi =          {10.1007/11785477_8},
-  gscholar =     38,
+  gscholar =     39,
   abstract =     {Concurrent data accesses in high-level languages like Java
                   and C\# are typically mediated using mutual-exclusion
                   locks. Threads use locks to <em>guard</em> the operations
@@ -1113,6 +1151,7 @@
   title =        {Portable, Mostly-Concurrent, Mostly-Copying Garbage
                   Collection for Multi-Processors},
   booktitle =    {ACM SIGPLAN International Symposium on Memory Management},
+  series =       {ISMM},
   year =         2006,
   pages =        {40--51},
   month =        jun,
@@ -1137,6 +1176,7 @@
   title =        {Reducing Generational Copy Reserve Overhead with Fallback
                   Compaction},
   booktitle =    {ACM SIGPLAN International Symposium on Memory Management},
+  series =       {ISMM},
   year =         2006,
   pages =        {17--28},
   month =        jun,
@@ -1173,12 +1213,13 @@
                   Architecture Sketches},
   booktitle =    {OOPSLA Workshop on Synchronization and Concurrency in
                   Object-Oriented Languages},
+  series =       {SCOOL},
   year =         2005,
   pages =        {39--48},
   month =        oct,
   address =      {San Diego, California},
   doi =          {1802/2099},
-  gscholar =     65,
+  gscholar =     66,
   abstract =     {We offer a reference model for nested transactions at the
                   level of memory accesses, and sketch possible hardware
                   architecture designs that implement that model. We describe
@@ -1204,13 +1245,14 @@
   title =        {Safe Futures for {J}ava},
   booktitle =    {ACM SIGPLAN Conference on Object-Oriented Programming,
                   Systems, Languages, and Applications},
+  series =       {OOPSLA},
   year =         2005,
   pages =        {439--453},
   month =        oct,
   address =      {San Diego, California},
   doi =          {10.1145/1094811.1094845},
   acm =          {http://dl.acm.org/authorize?N93676},
-  gscholar =     174,
+  gscholar =     177,
   abstract =     {A future is a simple and elegant abstraction that allows
                   concurrency to be expressed often through a relatively small
                   rewrite of a sequential program. In the absence of
@@ -1250,6 +1292,7 @@
                   Hardware Analysis and Software Redesign},
   booktitle =    {ACM International Conference on Architectural Support for
                   Programming Languages and Operating Systemes},
+  series =       {ASPLOS},
   year =         2004,
   pages =        {199--210},
   month =        oct,
@@ -1292,13 +1335,14 @@
   author =       {Stephen M. Blackburn and Antony L. Hosking},
   title =        {Barriers: Friend or Foe},
   booktitle =    {ACM SIGPLAN International Symposium on Memory Management},
+  series =       {ISMM},
   year =         2004,
   pages =        {143--151},
   month =        oct,
   address =      {Vancouver, Canada},
   doi =          {10.1145/1029873.1029891},
   acm =          {http://dl.acm.org/authorize?66848},
-  gscholar =     79,
+  gscholar =     78,
   abstract =     {Modern garbage collectors rely on read and write barriers
                   imposed on heap accesses by the mutator, to keep track of
                   references between different regions of the garbage
@@ -1337,6 +1381,7 @@
   author =       {Adam Welc and Antony L. Hosking and Suresh Jagannathan},
   title =        {Preemption-Based Avoidance of Priority Inversion for {J}ava},
   booktitle =    {IEEE International Conference on Parallel Processing},
+  series =       {ICPP},
   year =         2004,
   pages =        {529--538},
   month =        aug,
@@ -1378,6 +1423,7 @@
   author =       {Adam Welc and Suresh Jagannathan and Antony L. Hosking},
   title =        {Transactional Monitors for Concurrent Objects},
   booktitle =    {European Conference on Object-Oriented Programming},
+  series =       {ECOOP},
   year =         2004,
   pages =        {519--542},
   month =        jun,
@@ -1412,12 +1458,13 @@
                   L. Hosking},
   title =        {A Semantic Framework for Designer Transactions},
   booktitle =    {European Symposium on Programming},
+  series =       {ESOP},
   year =         2004,
   pages =        {249--263},
   month =        {March/April},
   address =      {Barcelona, Spain},
   doi =          {10.1007/b96702},
-  gscholar =     39,
+  gscholar =     40,
   abstract =     {A transaction defines a locus of computation that satisfies
                   important concurrency and failure properties; these
                   so-called ACID properties provide strong serialization
@@ -1438,12 +1485,13 @@
   author =       {Thomas VanDrunen and Antony L. Hosking},
   title =        {Value-Based Partial Redundancy Elimination},
   booktitle =    {International Conference on Compiler Construction},
+  series =       {CC},
   year =         2004,
   pages =        {167--184},
   month =        {March/April},
   address =      {Barcelona, Spain},
   doi =          {10.1007/b95956},
-  gscholar =     26,
+  gscholar =     28,
   abstract =     {Partial redundancy elimination (PRE) is a program
                   transformation that identifies and eliminates expressions
                   that are redundant on at least one (but not necessarily all)
@@ -1481,13 +1529,14 @@
   author =       {Frank Mueller and Antony L. Hosking},
   title =        {Penumbra: An {E}clipse Plugin for Introductory Programming},
   booktitle =    {OOPSLA Workshop on {E}clipse {T}echnology e{X}change},
+  series =       {eTX},
   year =         2003,
   pages =        {65--68},
   month =        oct,
   address =      {Anaheim, California},
   doi =          {10.1145/965660.965674},
   acm =          {http://dl.acm.org/authorize?N93679},
-  gscholar =     36,
+  gscholar =     38,
   abstract =     {Eclipse is a full-featured and easily extensible integrated
                   development environment. As such, it has grown to include a
                   large degree of functionality that may be overwhelming to
@@ -1517,12 +1566,13 @@
   title =        {On the Usefulness of Liveness for Garbage Collection and
                   Leak Detection},
   booktitle =    {European Conference on Object-Oriented Programming},
+  series =       {ECOOP},
   year =         2001,
   pages =        {181--206},
   month =        jun,
   address =      {Budapest, Hungary},
   doi =          {10.1007/3-540-45337-7_11},
-  gscholar =     18,
+  gscholar =     19,
   abstract =     {The effectiveness of garbage collectors and leak detectors
                   in identifying dead objects depends on the “accuracy” of
                   their reachability traversal. Accuracy has two orthogonal
@@ -1548,13 +1598,14 @@
   title =        {A Framework for Persistence-Enabled Optimization of {J}ava
                   Object Stores},
   booktitle =    {International Workshop on Persistent Object Systems},
+  series =       {POS},
   year =         2000,
   editor =       {Graham Kirby},
   pages =        {4--18},
   month =        sep,
   address =      {Lillehammer, Norway},
   doi =          {10.1007/3-540-45498-5_2},
-  gscholar =     2,
+  gscholar =     3,
   abstract =     {Aggressive optimization of programs often relies on analysis
                   and transformation that cuts across the natural abstraction
                   boundaries of the source programming language, such as
@@ -1583,6 +1634,7 @@
   title =        {Mostly-Copying Reachability-Based Orthogonal Persistence},
   booktitle =    {ACM SIGPLAN Conference on Object-Oriented Programming,
                   Systems, Languages, and Applications},
+  series =       {OOPSLA},
   year =         1999,
   pages =        {383--398},
   month =        nov,
@@ -1614,6 +1666,7 @@
   title =        {PM3: An Orthogonally Persistent Systems Programming
                   Language},
   booktitle =    {International Conference on Very Large Data Bases},
+  series =       {VLDB},
   year =         1999,
   pages =        {587--598},
   month =        sep,
@@ -1644,9 +1697,9 @@
   title =        {Swizzle barrier optimizations for orthogonal persistence in
                   {J}ava},
   booktitle =    {International Workshop on Persistence and Java},
+  series =       {PJW},
   year =         1998,
   editor =       {Ron Morrison and Mick Jordan and Malcolm Atkinson},
-  series =       {Advances in Persistent Object Systems},
   pages =        {268--278},
   month =        aug,
   address =      {Tiburon, California},
@@ -1694,14 +1747,14 @@
   title =        {Optimizing the read and write barriers for orthogonal
                   persistence},
   booktitle =    {International Workshop on Persistent Object Systems},
+  series =       {POS},
   year =         1998,
   editor =       {Ron Morrison and Mick Jordan and Malcolm Atkinson},
-  series =       {Advances in Persistent Object Systems},
   pages =        {149--159},
   month =        aug,
   address =      {Tiburon, California},
   publisher =    {Morgan Kaufmann},
-  gscholar =     30,
+  gscholar =     32,
   abstract =     {Persistent programming languages manage volatile memory as a
                   cache for stable storage, imposing a <em>read barrier</em>
                   on operations that access the cache, and a <em>write
@@ -1733,9 +1786,9 @@
   title =        {Reconciling Buffer Management with Persistence
                   Optimizations},
   booktitle =    {International Workshop on Persistent Object Systems},
+  series =       {POS},
   year =         1998,
   editor =       {Ron Morrison and Mick Jordan and Malcolm Atkinson},
-  series =       {Advances in Persistent Object Systems},
   pages =        {51--63},
   month =        aug,
   address =      {Tiburon, California},
@@ -1777,6 +1830,7 @@
   title =        {Analysing, Profiling and Optimising Orthogonal Persistence
                   for {J}ava},
   booktitle =    {International Workshop on Persistence and Java},
+  series =       {PJW},
   year =         1997,
   editor =       {Mick Jordan and Malcolm Atkinson},
   pages =        {107--115},
@@ -1808,6 +1862,7 @@
   title =        {Residency Check Elimination for Object-Oriented Persistent
                   Languages},
   booktitle =    {International Workshop on Persistent Object Systems},
+  series =       {POS},
   year =         1996,
   editor =       {Richard Connor and Scott Nettles},
   pages =        {174--183},
@@ -1833,13 +1888,14 @@
   author =       {J. Eliot B. Moss and Antony L. Hosking},
   title =        {Approaches to Adding Persistence to {J}ava},
   booktitle =    {International Workshop on Persistence and Java},
+  series =       {PJW},
   year =         1996,
-  editor =       {Malcome Atkinson and Mick Jordan},
+  editor =       {Malcolm Atkinson and Mick Jordan},
   pages =        {1--6},
   month =        sep,
   address =      {Drymen, Scotland},
   publisher =    {Sun Microsystems Technical Report 96-58},
-  gscholar =     38,
+  gscholar =     39,
   abstract =     {We describe and name a range of approaches to adding
                   persistence to the Java programming language. Java is
                   interesting in this regard not only because of the current
@@ -1864,13 +1920,14 @@
   title =        {Expressing Object Residency Optimizations Using Pointer Type
                   Annotations},
   booktitle =    {International Workshop on Persistent Object Systems},
+  series =       {POS},
   year =         1994,
   editor =       {Malcolm Atkinson and David Maier and Veronique Benzaken},
   pages =        {3--15},
   month =        sep,
   address =      {Tarascon, France},
   publisher =    {Springer},
-  gscholar =     22,
+  gscholar =     23,
   abstract =     {We consider some issues in optimizing persistent programming
                   languages. In particular, we show how to express
                   optimizations of object residency checks in strongly typed
@@ -1908,13 +1965,14 @@
   title =        {Protection Traps and Alternatives for Memory Management of
                   an Object-Oriented Language},
   booktitle =    {ACM Symposium on Operating Systems Principles},
+  series =       {SOSP},
   year =         1993,
   pages =        {106--119},
   month =        dec,
   address =      {Asheville, North Carolina},
   doi =          {10.1145/168619.168628},
   acm =          {http://dl.acm.org/authorize?N93671},
-  gscholar =     72,
+  gscholar =     71,
   abstract =     {Many operating systems allow user programs to specify the
                   protection level (inaccessible, read-only, read-write) of
                   pages in their virtual memory address space, and to handle
@@ -1940,6 +1998,7 @@
                   A Performance Evaluation},
   booktitle =    {ACM SIGPLAN Conference on Object-Oriented Programming,
                   Systems, Languages, and Applications},
+  series =       {OOPSLA},
   year =         1993,
   pages =        {288--303},
   month =        sep,
@@ -1965,6 +2024,7 @@
   title =        {Update Logging for Persistent Programming Languages: A
                   Comparative Performance Evaluation},
   booktitle =    {International Conference on Very Large Data Bases},
+  series =       {VLDB},
   year =         1993,
   pages =        {429--440},
   month =        aug,
@@ -1992,6 +2052,7 @@
                   Implementations},
   booktitle =    {ACM SIGPLAN Conference on Object-Oriented Programming,
                   Systems, Languages, and Applications},
+  series =       {OOPSLA},
   year =         1992,
   pages =        {92--109},
   month =        oct,
@@ -2017,13 +2078,14 @@
   author =       {Antony L. Hosking and J. Eliot B. Moss},
   title =        {Towards Compile-Time Optimisations for Persistence},
   booktitle =    {International Workshop on Persistent Object Systems},
+  series =       {POS},
   year =         1990,
   editor =       {Alan Dearle and Gail Shaw and Stan Zdonik},
   pages =        {17--27},
   month =        sep,
   address =      {Martha's Vineyard, Massachusetts},
   publisher =    {Morgan Kaufmann},
-  gscholar =     31,
+  gscholar =     32,
   abstract =     {We consider how a persistent programming language might
                   offer performance competitive with that of non-persistent
                   languages, at least on memory resident data. We are
@@ -2051,7 +2113,7 @@
   doi =          {10.1007/3-540-45498-5_13}
 }
 
-@Article{HoskingCutts2000SPE,
+@Article{Hosking+2000SPE,
   author =       {Antony L. Hosking and Quintin Cutts},
   title =        {Editorial: Special Issue on Persistent Object Systems},
   journal =      {Software --- Practice and Experience},
@@ -2063,6 +2125,17 @@
   doi =
                   {10.1002/(SICI)1097-024X(20000410)30:4<293::AID-SPE300>3.0.CO;2-Y},
   gscholar =     2
+}
+
+@Proceedings{Hosking+2015ISMM,
+  title =        {ACM SIGPLAN International Symposium on Memory Management},
+  year =         2015,
+  booktitle =    {ACM SIGPLAN International Symposium on Memory Management},
+  editor =       {Antony L. Hosking and Michael Bond},
+  series =       {ISMM},
+  address =      {Portland, Oregon},
+  month =        jun,
+  doi =          {10.1145/2754169}
 }
 
 @Proceedings{Hosking+2013DLS,
@@ -2081,7 +2154,8 @@
   title =        {ACM SIGPLAN International Conference on Object-Oriented
                   Programming, Systems, Languages, and Applications},
   year =         2013,
-  editor =       {Antony L. Hosking and Patrick Eugster and Cristina C. Lopes},
+  editor =       {Antony L. Hosking and Patrick Eugster and Cristina Lopes},
+  series =       {OOPSLA},
   address =      {Indianapolis, Indiana},
   month =        oct,
   publisher =    {ACM},
@@ -2089,10 +2163,11 @@
 }
 
 @Proceedings{Hosking+2013SPLASH,
-  title =        {ACM Conference Conference on Systems, Programming,
-                  Languages, and Applications: Software for Humanity},
+  title =        {ACM SIGPLAN Conference on Systems, Programming, Languages, and
+                  Applications: Software for Humanity},
   year =         2013,
   editor =       {Antony L. Hosking and Patrick Eugster},
+  series =       {SPLASH},
   address =      {Indianapolis, Indiana},
   month =        oct,
   publisher =    {ACM},
@@ -2101,9 +2176,10 @@
 
 @Proceedings{Hosking+2013Onward,
   title =        {ACM Symposium on New Ideas in Programming and Reflections on
-                  Software: Onward!},
+                  Software},
   year =         2013,
   editor =       {Antony L. Hosking and Patrick Eugster and Robert Hirschfeld},
+  series =       {Onward!},
   address =      {Indianapolis, Indiana},
   month =        oct,
   publisher =    {ACM},
@@ -2115,16 +2191,18 @@
                   Environments},
   year =         2009,
   editor =       {Antony L. Hosking and David F. Bacon and Orran Krieger},
+  series =       {VEE},
   address =      {Washington, DC},
   month =        mar,
   doi =          {10.1145/1508293}
 }
 
-@Proceedings{Hosking+MSPC,
+@Proceedings{Hosking+2006MSPC,
   title =        {ACM SIGPLAN Workshop on Memory System Performance and
                   Correctness},
   year =         2006,
   editor =       {Antony L. Hosking and Ali-Reza Adl-Tabatabai},
+  series =       {MSPC},
   address =      {San Jose, California},
   month =        2006,
   publisher =    {ACM},
@@ -2135,6 +2213,7 @@
   title =        {ACM SIGPLAN International Symposium on Memory Management},
   year =         2000,
   editor =       {Craig Chambers and Antony L. Hosking},
+  series =       {ISMM},
   address =      {Minneapolis, Minnesota},
   month =        oct,
   doi =          {10.1145/362422}
@@ -2145,6 +2224,7 @@
                   and Quintin Cutts and Amer Diwan},
   title =        {Partial Redundancy Elimination for Access Path Expressions},
   booktitle =    {ECOOP Workshop on Aliasing in Object Oriented Systems},
+  series =       {IWAOOS},
   year =         1999,
   editor =       {James Noble and Jan Vitek and Doug Lea and Paulo Sergio
                   Almeida},
@@ -2177,11 +2257,12 @@
                   optimizations like PRE.}
 }
 
-@InProceedings{HoskingNovianto1997GC,
+@InProceedings{Hosking+1997GC,
   author =       {Antony L. Hosking and Aria P. Novianto},
   title =        {Reachability-Based Orthogonal Persistence for C, C++, and
                   Other Intransigents},
   booktitle =    {OOPSLA Workshop on Garbage Collection and Memory Management},
+  series =       {GC},
   year =         1997,
   month =        oct,
   address =      {Atlanta, Georgia},
@@ -2211,6 +2292,7 @@
   author =       {Antony L. Hosking and Quintin Cutts},
   title =        {Analysing, Profiling and Optimising for Persistence},
   booktitle =    {Australian Workshop on Integrated Data Environments},
+  series =       {IDEA},
   year =         1997,
   month =        may,
   address =      {Magnetic Island, Queensland, Australia},
@@ -2242,6 +2324,7 @@
   author =       {Antony L. Hosking and Richard S. Hudson},
   title =        {Remembered Sets Can Also Play Cards},
   booktitle =    {OOPSLA Workshop on Garbage Collection and Memory Management},
+  series =       {GC},
   year =         1993,
   editor =       {Paul Wilson},
   month =        sep,
@@ -2265,6 +2348,7 @@
   author =       {Antony L. Hosking},
   title =        {Main Memory Management for Persistence},
   booktitle =    {OOPSLA Workshop on Garbage Collection and Memory Management},
+  series =       {GC},
   year =         1991,
   editor =       {Paul R. Wilson and Barry Hayes},
   month =        oct,
@@ -2457,7 +2541,7 @@
   number =       {95-084},
   month =        dec,
   url =          {http://docs.lib.purdue.edu/cstech/1256},
-  gscholar =     6,
+  gscholar =     7,
   abstract =     {Many systems must dynamically track writes to cached data,
                   for the purpose of reconciling those updates with respect to
                   the permanent or global state of the data.  For example,
@@ -2565,7 +2649,7 @@
   month =        mar,
   url =
                   {https://web.cs.umass.edu/publication/docs/1991/UM-CS-1991-025.pdf},
-  gscholar =     17,
+  gscholar =     18,
   abstract =     {We present the design and implementation of Persistent
                   Modula-3, a compiled, optimized, persistent programming
                   language. The design allows the evaluation of performance

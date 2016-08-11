@@ -8,7 +8,7 @@ I am a professor of computer science, with academic appointments at [Purdue
 University](http://www.cs.purdue.edu/people/hosking) (on leave from August
 2015) and the [Australian National
 University](http://cs.anu.edu.au/user/3893), contributing also as a researcher
-with [NICTA, Australia](http://www.nicta.com.au).  I also consult regularly in
+with [Data61, Australia](http://www.data61.com.au).  I also consult regularly in
 intellectual property litigation as a technical expert.  I studied computer
 science at the [University of Adelaide](http://cs.adelaide.edu.au), the
 [University of Waikato](http://cs.waikato.ac.nz), and the [University of
